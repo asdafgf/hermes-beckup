@@ -1,0 +1,55 @@
+# Logs - çok büyür, yedekleme
+logs/
+*.log
+
+# Session geçmişleri - çok büyür
+sessions/
+state.db*
+hermes_state_*.json
+
+# Cache geçici dosyalar
+cache/
+audio_cache/
+image_cache/
+__pycache__/
+*.pyc
+
+# Hermes agent source code (git clone, ayrı repo)
+hermes-agent/
+
+# Geçici & kilit dosyaları
+*.lock
+*.pid
+.gateway-planned-stop.json
+restart_last_processed.json
+interrupt_debug.log
+processes.json
+.tirith-install-failed
+.update_check
+.skills_prompt_snapshot.json
+models_dev_cache.json
+
+# Sandbox geçici dosyaları
+sandboxes/
+hooks/
+bin/
+pairing/
+
+# Gateway service backups
+gateway-service/
+migration/
+
+# Skills hub index cache (otomatik yeniden iner)
+skills/.hub/
+skills/.bundled_manifest
+skills/.curator_state
+skills/.usage.json
+
+# state DB WAL/SHM (yeniden oluşur)
+*.db-shm
+*.db-wal
+
+# Config yedekleri
+config.yaml.bak*
+
+# Obsidian vault (ayrı yerde zaten)
