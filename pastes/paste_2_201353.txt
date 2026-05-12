@@ -1,0 +1,63 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\eymen> cd C:\Users\eymen\runners-journey\artifacts\mobile; $env:JAVA_HOME="C:\Program Files\Microsoft\jdk-21.0.10.7-hotspot"; pnpm expo run:android
+env: load .env
+env: export EXPO_PUBLIC_SUPABASE_URL EXPO_PUBLIC_SUPABASE_ANON_KEY
+› Building app...
+Starting a Gradle Daemon, 1 busy and 1 incompatible Daemons could not be reused, use --status for details
+Configuration on demand is an incubating feature.
+
+> Configure project :
+[ExpoRootProject] Using the following versions:
+  - buildTools:  36.0.0
+  - minSdk:      24pp
+  - compileSdk:  36
+  - targetSdk:   36
+  - ndk:         27.1.12297006
+  - kotlin:      2.1.20
+  - ksp:         2.1.20-2.0.1
+
+[Incubating] Problems report is available at: file:///C:/Users/eymen/runners-journey/artifacts/mobile/android/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* Where:
+Build file 'C:\Users\eymen\runners-journey\artifacts\mobile\android\build.gradle' line: 24
+
+* What went wrong:
+A problem occurred evaluating root project 'Ak─▒ll─▒Kira'.
+> Failed to apply plugin 'com.facebook.react.rootproject'.
+   > A problem occurred configuring project ':app'.
+      > com.android.builder.errors.EvalIssueException: [CXX1101] NDK at C:\Users\eymen\AppData\Local\Android\Sdk\ndk\27.1.12297006 did not have a source.properties file
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 12s
+24 actionable tasks: 24 up-to-date
+Error: C:\Users\eymen\runners-journey\artifacts\mobile\android\gradlew.bat app:assembleDebug -x lint -x test --configure-on-demand --build-cache -PreactNativeDevServerPort=8081 -PreactNativeArchitectures=x86_64,arm64-v8a exited with non-zero code: 1
+Error: C:\Users\eymen\runners-journey\artifacts\mobile\android\gradlew.bat app:assembleDebug -x lint -x test --configure-on-demand --build-cache -PreactNativeDevServerPort=8081 -PreactNativeArchitectures=x86_64,arm64-v8a exited with non-zero code: 1
+    at ChildProcess.completionListener (C:\Users\eymen\runners-journey\node_modules\.pnpm\@expo+spawn-async@1.7.2\node_modules\@expo\spawn-async\src\spawnAsync.ts:67:13)
+    at Object.onceWrapper (node:events:623:26)
+    at ChildProcess.emit (node:events:508:28)
+    at ChildProcess.cp.emit (C:\Users\eymen\runners-journey\node_modules\.pnpm\cross-spawn@7.0.6\node_modules\cross-spawn\lib\enoent.js:34:29)
+    at maybeClose (node:internal/child_process:1100:16)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:305:5)
+    ...
+    at spawnAsync (C:\Users\eymen\runners-journey\node_modules\.pnpm\@expo+spawn-async@1.7.2\node_modules\@expo\spawn-async\src\spawnAsync.ts:28:21)
+    at spawnGradleAsync (C:\Users\eymen\runners-journey\node_modules\.pnpm\@expo+cli@54.0.24_expo-rout_a5b3c719bb5ccdac93692d80fc3c093b\node_modules\@expo\cli\src\start\platforms\android\gradle.ts:134:28)
+    at assembleAsync (C:\Users\eymen\runners-journey\node_modules\.pnpm\@expo+cli@54.0.24_expo-rout_a5b3c719bb5ccdac93692d80fc3c093b\node_modules\@expo\cli\src\start\platforms\android\gradle.ts:83:16)
+    at runAndroidAsync (C:\Users\eymen\runners-journey\node_modules\.pnpm\@expo+cli@54.0.24_expo-rout_a5b3c719bb5ccdac93692d80fc3c093b\node_modules\@expo\cli\src\run\android\runAndroidAsync.ts:62:24)
+PS C:\Users\eymen\runners-journey\artifacts\mobile>

@@ -1,0 +1,5 @@
+REPLIT_EMAIL=ornek@mail.com
+REPLIT_PASSWORD=sifren
+REPLIT_USER=kullanici_adi
+REPLIT_PROJECT=ProjeAdi
+DOWNLOAD_DIR=C:\Users\eymen\proje_adi

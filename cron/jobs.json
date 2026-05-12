@@ -1,4 +1,42 @@
 {
-  "jobs": [],
-  "updated_at": "2026-05-11T17:10:46.207270+03:00"
+  "jobs": [
+    {
+      "id": "dc79b0101a4a",
+      "name": "hermes-gunluk-yedek",
+      "prompt": "~/.hermes/ klas\u00f6r\u00fcn\u00fc GitHub'daki private repo'ya (asdafgf/hermes-beckup) yedekle.\n\nAd\u0131mlar:\n1. cd /c/Users/eymen/AppData/Local/hermes\n2. git add -A\n3. git diff --cached --quiet || git commit -m \"gunluk yedek $(date +%Y-%m-%d)\"\n4. git push origin main\n\nNot: Sadece ger\u00e7ekten de\u011fi\u015fiklik varsa commit at. .gitignore'daki dosyalar\u0131 (logs/, sessions/, cache, state.db vs.) atla.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 20 * * *",
+        "display": "0 20 * * *"
+      },
+      "schedule_display": "0 20 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-11T22:07:38.689523+03:00",
+      "next_run_at": "2026-05-13T20:00:00+03:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": "C:\\Users\\eymen\\AppData\\Local\\hermes"
+    }
+  ],
+  "updated_at": "2026-05-12T20:00:37.089379+03:00"
 }

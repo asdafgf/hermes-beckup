@@ -1,18 +1,19 @@
-NEXUS CORE OMEGA v3.3: Arka planda calisir, kullanici protokol metnini gormek istemez. Her mesajda sadece [XRAY + MIRROR + ...] etiketi + → XRAY: / → MOD KARARI: basligi yeterli. Full protokol metni HIC BASILMAZ. Kullanici cevabi gormek istiyor, sistemi degil. Display mode preference olarak skill'e kaydedildi (2026-05-11).
+CRONJOBS: 08:15 genel ozet(son dakika+X15+TR20+Dunya25), 08:30 Istanbul, 09:00 Kayseri. Her 20dk ekonomi takip (altin/gumus/doviz yon analizi). Hepsi Telegram'a. Teslimat: all (bu sohbet + Telegram). hermes-gunluk-yedek: 20:00 (güncellendi, eski 23:00).
 §
-Son bellek kaydı güncellendi: Skill kod-yaz-calistir-hata-ayikla-dongusu. Gemini API anahtari ~/.gemini_api_key, model gemini-2.5-flash. Kullanici donguyu prensip edindi: yaz/calsitir/hata bul/duzelt/tekrarla — adim sorma, otomatik yap.
+Hermes yedek repo: asdafgf/hermes-beckup (private). ~/.hermes/ tam yedek — config, skills, cron, .env, auth.json. .gitignore'da sessions/, logs/, cache/, state.db* hariç. Günlük cron: 23:00. Geri yükleme: git clone https://github.com/asdafgf/hermes-beckup.git hermes
 §
-Kurulu araç seti tamamlandı: Python (Anaconda), VS Code, Hermes (DeepSeek), Claude.ai (markopasa_@hotmail.com), Gemini API, Claude Code CLI, n8n, Scoop, Everything, Obsidian, Docker, ffmpeg, Chrome, Insomnia.
+WSL Allow Once çözümü: skill devops/wsl-allow-once-cozumu. Windows Firewall'dan wsl.exe'ye kalıcı izin ver. Hata cozum dongusu: Claude sorun anlat => kod al => calistir => hata varsa Claude'a geri ver. WSL Docker: skill devops/wsl-docker-kurulum (10 adım). Supabase start hatası: npx supabase start WSL Docker'ı görmez, DOCKER_HOST ayarla gerekebilir.
 §
-GÖRSEL ANALİZ PROTOKOLÜ (öğrenilmiş kural):
-Eymen bir resim paylaştığında otomatik olarak:
-1. Gemini API (gemini-2.5-flash) ile analiz yap
-2. Tablo varsa matematiksel işlemleri Python ile doğrula
-3. Tutarsızlık varsa (özellikle tablo toplamları uyuşmazsa) → OCR hatası olabilir, Claude.ai web öner
-4. EasyOCR (CPU) ve LLaVA şimdilik güvenilir değil
-Claude Code CLI görsel analiz yapamaz. Claude.ai web en güvenilir yöntemdir.
+Eymen | Turkce | Istanbul+Kayseri | Erciyes/Win11
+Tercihler:
+- Kisa, ozlu, madde madde Turkce cevap, sormadan islem yap
+- Hata cozum dongusu: Claude sorun anlat => kod al => calistir => hata varsa Claude'a geri ver
+- Allow Once sorma, kalici cozum uygula
+- Admin/UAC sorunlarinda WSL tabanli cozum tercih et
+Projeler: KiraLog (Expo/RN, local Supabase calisiyor, migration duzeltildi), n8n guvenlik kamerasi
 §
-HATA AYIKLAMA — AI Yardım Stratejisi (entegre: kod-yaz-calistir-hata-ayikla-dongusu skill'inde):
-Hata kodu, yol(path) sorunu, doğrulama hatası, çakışma (OpenMP, protobuf, DLL vs.) çözümü için: Önce Hermes'te claude-sonnet-4 modelini dene, olmazsa Gemini API, son çare Claude.ai web (Chrome CDP). Otomatik strateji.
+KiraLog checkpoint 2026-05-12: Docker WSL Ubuntu v29.4.3, 12 container. local Supabase calisiyor (Studio 54323, REST 54321). 9/9 Edge Functions calisiyor flat dir+symlink ile. Web build 1350 module 0 hata. GitHub asdafgf/kiralog "FAZ 1 MVP". OTP test edilmedi, sequential_pipeline calistirilmadi. Cloud deploy 2FA+limit bekliyor. Devam: OTP test, pipeline run, deploy.
 §
-CRONJOBS: 08:15 genel ozet(son dakika+X15+TR20+Dunya25), 08:30 Istanbul, 09:00 Kayseri. Her 20dk ekonomi takip (altin/gumus/doviz yon analizi). Hepsi Telegram'a. Teslimat: all (bu sohbet + Telegram).
+Android gelistirme ortami kurulumu tamam (May 12): JDK 21 LTS, Gradle 9.5.0, Android SDK 34/35/36, Build Tools 34/35/36, ADB, Android Studio Panda 4. ANDROID_HOME env ayarlandi. Expo/RN projeleri icin hazir.
+§
+Hermes terminal tool patchi (May 14): local.py'ye _close_pipes + Windows CTRL_BREAK_EVENT + creationflags eklendi. C:\Users\eymen\AppData\Local\hermes\hermes-agent\tools\environments\local.py. Hermes güncellemesinde sıfırlanabilir — skill devops/windows-terminal-hata-cozumu'ndan geri yüklenebilir.

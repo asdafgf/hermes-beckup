@@ -1,23 +1,21 @@
-_Learn about the person you're helping. Update this as you go._
-§
 **Name:**
 §
-**What to call them:**
-§
-**Pronouns:** _(optional)_
-§
-**Timezone:**
-§
-**Notes:**
-§
-Context: _(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)_
-§
-Context: ---
-§
-Context: The more you know, the better you can help. But remember — you're learning about a person, not building a dossier. Respect the difference.
-§
-**Name:** Eymen | **Dil:** Türkçe | **2 şehir:** İstanbul+Kayseri
-**İlgi:** Finans (altın/gümüş/döviz/petrol), emlak (kentsel dönüşüm), ISO 10002 kalite
-**Sabah:** 08:15 genel(son dakika+X15+Türkiye20+Dünya25), 08:30 İstanbul, 09:00 Kayseri. Her 20dk ekonomi(yön analizi). Telegram'a.
-**Tercih:** Özlü/madde, Türkçe, yabancıyı çevir, kaynak. Otomatik döngü(bana sorma).
-**PC:** Erciyes/Win11. n8n:5678 çalışıyor, Anaconda+Chrome 148+gh 2.92+Obsidian. GitHub push beklemede.
+**Name:** Eymen | **Dil:** Türkçe | **Şehir:** İstanbul + Kayseri
+**PC:** Erciyes/Win11
+**Tercihler:**
+- Eylem odaklı — sormadan yap, "ne yapıyorsun" / "hangi aşamadayız" sorar
+- Kısa, özlü, madde madde, Türkçe cevap
+- Skill derse hemen oluştur, bekletme
+- Hata çözüm döngüsü: Claude sorun anlat => kod al => çalıştır => hata varsa Claude'a ver
+- Background işler: "arka planda indir, haber ver" — bekletme
+- İşlemler "bilgisayar yapıyor" hissi vermeli
+- Android Studio adımları net sıralı talimat ister
+- "Tüm işlemler iptal" dediğinde zombi süreç kalmamalı
+- n8n login: markopasa_@hotmail.com / 123456
+
+**Projeler:**
+- KiraLog: Expo/RN kiralama yönetimi (Docker+Supabase, FAZ 1 MVP)
+- Runners-Journey: Expo monorepo (Replit'ten, Drive'dan indirildi)
+- n8n ev güvenlik: WiFi kamera RTSP (Hikvision, IP 192.168.0.17, şifre kayıp)
+
+**Araçlar:** Python(Anaconda), VS Code, Hermes(DeepSeek), Claude.ai, Gemini API, Claude Code CLI, n8n v2.19.5, Scoop, Everything, Obsidian, Docker, ffmpeg, Chrome(googlechrome), Insomnia, nmap

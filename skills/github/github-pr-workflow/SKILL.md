@@ -75,7 +75,33 @@ Branch naming conventions:
 - `docs/description` — documentation
 - `ci/description` — CI/CD changes
 
-## 2. Making Commits
+## 2. Pre-Commit Checklist
+
+Before staging and committing, always verify:
+
+### Sensitive Files Check
+
+```bash
+# Ensure .env files NEVER reach git — restore them from staging if staged
+if git ls-files --error-unmatch .env 2>/dev/null; then
+  git checkout -- .env
+  echo "⚠️ .env restored from staging — it should NOT be committed"
+fi
+
+# Check for other sensitive files
+for f in .env.local .env.production credentials.json *.pem *.key; do
+  if [ -f "$f" ] && git ls-files --error-unmatch "$f" 2>/dev/null; then
+    echo "⚠️ SENSITIVE FILE STAGED: $f"
+  fi
+done
+```
+
+Also check that sensitive env vars aren't hardcoded in source files:
+```bash
+grep -n "EXPO_PUBLIC_SUPABASE_URL\|ANON_KEY\|SERVICE_ROLE\|SUPABASE_KEY" $(git diff --cached --name-only) 2>/dev/null | grep -v ".env.example" | grep -v ".gitignore" | head -10
+```
+
+## 3. Making Commits
 
 Use the agent's file tools (`write_file`, `patch`) to make changes, then commit:
 

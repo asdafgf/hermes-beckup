@@ -62,6 +62,25 @@ Döngü prensibi: Kod yaz → çalıştır → hata → düzelt → çözüm. Sa
 - Çözüm için Gemini API'ye sor (tüm traceback'i gönder)
 - Çözülünce prensibi skill olarak kaydet
 
+## Test Stratejisi (Kullanıcı Tercihi)
+
+**Kullanıcı Eymen'in prensibi: "Bölüm bölüm test et, sıkıntı yoksa bir sonraki aşamaya geç, var ise çözene kadar uğraş."**
+
+```python
+# 1. Derleme/kontrol et
+npx tsc --noEmit 2>&1 | head -20
+# Veya:
+npx expo export --platform web --output-dir /tmp/test-export 2>&1 | tail -20
+
+# 2. Hata varsa düzelt -> tekrar dene
+# 3. Derleme başarılı -> çalıştır
+# 4. Çalışma başarılı -> bir sonraki modüle geç
+
+# Hiçbir adımda kullanıcıya sorma. Otomatik yap.
+```
+
+Bu prensip özellikle React Native/Expo projelerinde geçerlidir (KiraLog gibi). Derleme hatası → düzelt → tekrar dene döngüsünü kullanıcıya sormadan yap.
+
 ## Tesseract Görsel Analizi
 
 Tesseract v5.5.0 kurulu (Scoop ile). Türkçe+İngilizce dil dosyalı. PSM=3 (default) en iyi sonucu verir. Görsel ön işleme (kontrast, threshold) tablo okumasını BOZAR — ham görsel kullan.
