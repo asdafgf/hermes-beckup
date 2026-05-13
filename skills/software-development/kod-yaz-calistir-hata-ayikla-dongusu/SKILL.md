@@ -36,6 +36,14 @@ metadata:
 /c/Users/eymen/anaconda3/python.exe /c/Users/eymen/Desktop/dosya_adi.py
 ```
 
+**google namespace çakışması:** Hermes venv'inde (`hermes-agent\\venv\\Lib\\site-packages\\google`) boş bir `google` namespace paketi var. Anaconda'nın `google.genai` modülünü import etmeye çalışırken PATH sıralaması nedeniyle önce Hermes venv'indeki `google` bulunur ve `from google import genai` hata verir (`cannot import name 'genai' from 'google'`). Çözüm: her zaman doğrudan Anaconda Python yolunu kullan, asla `python` kısaltmasıyla çalıştırma.
+
+**Interaktif script'ler (input alan):** `input()` fonksiyonu kullanan script'ler PTY'de sonsuz EOF döngüsüne girer. Bunun yerine:
+1. Script'i yaz
+2. Bir `.bat` dosyası oluştur (Anaconda Python yolunu göstersin)
+3. `cmd.exe /c start /B /MIN "Başlık" "C:\path\to\script.bat"` ile ayrı CMD penceresinde aç
+4. Kullanıcıya "Yeni CMD penceresi açıldı" bilgisini ver
+
 ## Altyapı Kurulum Döngüsü
 
 Python paket/binary kurulumu gerektiğinde:

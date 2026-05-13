@@ -108,6 +108,11 @@ ls $ANDROID_HOME/build-tools/35.0.0     # Build tools var mı?
 ls $ANDROID_HOME/platform-tools/adb.exe # ADB var mı?
 ```
 
+## İlgili Skill'ler
+
+Build doğrulama ve test için:
+- `expo-android-build-control` — ortam envanteri, Android Studio açma, Gradle build, yaygın hatalar
+
 ## Pitfalls / Tuzaklar
 
 ### MSVC Build Tools

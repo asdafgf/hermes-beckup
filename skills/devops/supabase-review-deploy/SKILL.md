@@ -111,7 +111,25 @@ Proje adını ve seed yolunu da ekle:
 seed = "supabase/seed/public_holidays.sql"
 ```
 
-### 4. Deploy Hazırlığı
+### 4. Edge Functions Serve (Local Test)
+
+`npx supabase start` Edge Runtime container'ını açar ama **fonksiyonları compile etmez**. Fonksiyonları test etmek için ayrıca serve etmek gerekir:
+
+```bash
+# Fonksiyonları compile et ve serve et (ilk seferde modül indirme uzun sürebilir)
+cd supabase/functions
+npx supabase functions serve --no-verify-jwt
+
+# Başka bir terminalde test et
+curl -X POST "http://localhost:54321/functions/v1/auth/otp-request" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $SUPABASE_ANON_KEY" \
+  -d '{"phone_number":"+905551234567"}'
+```
+
+**İlk serve uzun sürer (~2-5 dk):** Deno modüllerini (özellikle `jose` JWT kütüphanesi) indirip önbelleğe alır. Sonraki seferler anında açılır.
+
+### 5. Deploy Hazırlığı
 
 Son kontroller:
 
@@ -121,7 +139,7 @@ npx supabase --version 2>/dev/null || echo "Supabase CLI gerekli"
 
 # Production env değişkenleri set edilmiş mi?
 grep -r "mock-" .env 2>/dev/null && echo "⚠️ Mock değerler var!"
-grep -r "your-project\|your-anon" .env 2>/dev/null && echo "⚠️ Placeholder değerler var!"
+grep -r "your-project\\|your-anon" .env 2>/dev/null && echo "⚠️ Placeholder değerler var!"
 
 # Edge Functions deploy'a hazır mı?
 cd supabase/functions && for f in */; do
@@ -138,6 +156,10 @@ done
 - **`Uint8Array` vs `ArrayBuffer`** — Deno'da `crypto.subtle.digest()` `ArrayBuffer`, `new Uint8Array()` ise `Uint8Array` döner. Bunları karıştırmak TS hatasına yol açar. `Uint8Array.buffer` ile dönüştür.
 - **OTP rate limiting in-memory** — Edge Functions cold start'te sıfırlanır. Production'da Redis veya DB tabanlı rate limiting gerekir.
 - **`verify_jwt = true` yetmez** — Kullanıcı ID'si JWT'den alınmalı, body'den gelen parametreye güvenilmemeli.
+- **Edge Runtime DNS cache** — Kong, Edge Runtime'a DNS üzerinden bağlanır. Container restart sonrası `docker restart supabase_kong_kiralog` gerekebilir. Aksi halde `DNS resolution failed` hatası alınır.
+- **config.toml `policy` değeri doğru olmalı** — `policy = "per_function"` geçersizdir. Doğru: `policy = "per_worker"`. Hatalı değer `supabase status`'ün config parse etmesini engeller.
+- **`[functions]` top-level bölüm geçersiz** — `config.toml`'da `[functions]` üst düzey bölümünde `enabled` veya `verify_jwt` tanımlanamaz. Her fonksiyon kendi bölümünde yapılandırılır.
+- **"Function not found" hatası** — Edge Runtime çalışıyor olsa bile fonksiyonlar compile edilmemişse `Function not found` döner. `supabase functions serve` çalıştırılmalı.
 
 ### OTP Doğrulama Mantığı
 
@@ -160,5 +182,6 @@ Hatalı else-if yapısı production'da `"123456"` mock OTP'sini atlar ve kabul e
 **Test script:** `scripts/test-otp-flow.py` — OTP akışı testi (rate limiting, mock/prod mod, hatalı OTP).
 
 **Referans dosyası:** `references/kiralog-supabase-review.md` — KiraLog projesine özel tüm migrasyon/function fix detayları.
+**Schema referansı:** `references/kiralog-db-schema-2026-05.md` — Mevcut tablo yapısı, RLS durumu, Edge Functions listesi.
 
 **OTP kanal alternatifi:** `_shared/services.ts`'e `sendEmailOtp(email, otp)` eklenir. NetGSM SMS: `.env`'de `NETGSM_USERCODE`, `NETGSM_PASSWORD`, `NETGSM_MSGHEADER`.

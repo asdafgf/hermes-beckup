@@ -1,21 +1,9 @@
 **Name:**
 §
-**Name:** Eymen | **Dil:** Türkçe | **Şehir:** İstanbul + Kayseri
-**PC:** Erciyes/Win11
-**Tercihler:**
-- Eylem odaklı — sormadan yap, "ne yapıyorsun" / "hangi aşamadayız" sorar
-- Kısa, özlü, madde madde, Türkçe cevap
-- Skill derse hemen oluştur, bekletme
-- Hata çözüm döngüsü: Claude sorun anlat => kod al => çalıştır => hata varsa Claude'a ver
-- Background işler: "arka planda indir, haber ver" — bekletme
-- İşlemler "bilgisayar yapıyor" hissi vermeli
-- Android Studio adımları net sıralı talimat ister
-- "Tüm işlemler iptal" dediğinde zombi süreç kalmamalı
-- n8n login: markopasa_@hotmail.com / 123456
-
-**Projeler:**
-- KiraLog: Expo/RN kiralama yönetimi (Docker+Supabase, FAZ 1 MVP)
-- Runners-Journey: Expo monorepo (Replit'ten, Drive'dan indirildi)
-- n8n ev güvenlik: WiFi kamera RTSP (Hikvision, IP 192.168.0.17, şifre kayıp)
-
-**Araçlar:** Python(Anaconda), VS Code, Hermes(DeepSeek), Claude.ai, Gemini API, Claude Code CLI, n8n v2.19.5, Scoop, Everything, Obsidian, Docker, ffmpeg, Chrome(googlechrome), Insomnia, nmap
+Hata çözüm prensibi: 2 kez kendi dene, 3'te Gemini'ye bağlan → kod al → VS Code'a yapıştır → çalıştır → çıktıyı Gemini'ye ver → çözüm bulana kadar döngü. Otomatik, sormadan yap. Skill: hermes-gemini-copilot
+§
+Kullanıcı direkt adım numarasıyla atlar ("2" = adım 2'ye geç) — açıklama beklemez, sormadan yap.
+§
+Hermes ile Chrome Web Terminal/Gemini sohbet kontrolü istiyor. Çözüm: MCP server (Chrome CDP tabanlı). Eğer Chrome extension yüklenemezse, CDP (Chrome DevTools Protocol) ile doğrudan bağlanan MCP server kullanılır.
+§
+VS Code tercihi: yeni proje aç (File→Open Folder), Gemini kodunu yeni dosyaya yapıştır (Ctrl+N), kaydet (Ctrl+S), ardından VS Code'un ▶ Run (yeşil oynatma) butonuyla veya sağ tık→Run Python File ile çalıştır. Terminal çıktısını kendisi görmek ister. VS Code açık mı kontrol et, tekrar tekrar açma — açıksa kullan.

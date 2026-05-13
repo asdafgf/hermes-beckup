@@ -11,6 +11,62 @@ Bir Expo/React Native projesinin Supabase backend'ini (migrasyonlar + Edge Funct
 
 ## Adımlar
 
+### 0. Ön Koşul: Supabase Başlatma Döngüsü
+
+Docker açık değilse → Docker Desktop'ı başlat (`/c/Program Files/Docker/Docker/Docker Desktop.exe &`), hazır olana kadar `docker ps` ile bekle.
+
+Supabase durmuş veya container yoksa:
+
+```bash
+# Temiz başlangıç (eski veriyi siler)
+npx supabase stop --no-backup
+npx supabase start
+```
+
+**⚠️ Pitfall: `--no-backup` yeterli olmayabilir; postgres imajını da sil**
+Eğer `npx supabase stop --no-backup` ve `docker system prune --volumes -f` yapmanıza rağmen hala `duplicate key value violates unique constraint "schema_migrations_pkey"` hatası alınıyorsa, postgres imajının kendi init script'lerinde embed edilmiş veri olabilir. Çözüm:
+
+```bash
+npx supabase stop
+docker images --format '{{.Repository}}:{{.Tag}}' | grep supabase/postgres
+docker rmi public.ecr.aws/supabase/postgres:<version>
+npx supabase start   # imajı yeniden çeker, temiz başlar
+```
+
+Bu son çaredir — imajı tekrar indirmek zaman alır. Önce `supabase stop --no-backup` + `docker volume prune -f` dene, olmazsa imajı sil.
+
+**⚠️ Pitfall: İlk start'ta imaj indirme timeout'u**
+`npx supabase start` ilk çalıştırmada 13+ Docker imajı indirir (~350MB+). Terminal timeout limitini (120s) aşabilir. Çözüm:
+- Arka planda başlat: `npx supabase start &` ve `--notify_on_complete` ile bekle
+- Veya daha kısa timeout ile ilk seferde deneme yap, `docker pull supabase/postgres:latest` gibi önceden pull'la
+- `npx supabase start` ikinci çalıştırmada imajlar hazır olduğu için hızlıdır
+
+**⚠️ Pitfall: "relation already exists" hatası**
+Eğer `npx supabase start` sırasında `ERROR: relation "users" already exists (SQLSTATE 42P07)` alınırsa, bunun sebebi önceki `supabase stop`'un volume'ları temizlememesidir. Çözüm:
+
+```bash
+npx supabase stop --no-backup   # volume'ları sil
+npx supabase start               # temiz başlat
+```
+
+`--no-backup` flag'i olmadan yapılan `supabase stop` veriyi korur ve migrasyonlar tekrar uygulanmaya çalışınca çakışır. Bu flag olmazsa `supabase start` mevcut veriyi kullanır ve migrasyonları **atlar** — ilk start'tan sonra yeni migrasyon eklediysen `supabase db diff` ile kontrol et.
+
+**⚠️ Pitfall: IF NOT EXISTS eklerken ikileme (duplicate)**
+
+`CREATE TABLE` → `CREATE TABLE IF NOT EXISTS` düzeltmesi için `sed` kullanırken:
+
+```bash
+sed -i 's/^CREATE TABLE /CREATE TABLE IF NOT EXISTS /g' supabase/migrations/*.sql
+```
+
+Bu çalışır ANCAK daha önce `patch` aracıyla eklenmiş bir `IF NOT EXISTS` varsa, `sed` ikinci kez ekleyerek `CREATE TABLE IF NOT EXISTS IF NOT EXISTS ...` yapar. Sonuç: `syntax error at or near "NOT"`.
+
+**Güvenli yaklaşım:**
+1. Önce ikileme kontrolü: `grep "IF NOT EXISTS IF NOT EXISTS\|IF NOT EXISTS  IF NOT EXISTS" supabase/migrations/*.sql`
+2. Toplu değişim için `sed` kullan ama önce dosyayı kontrol et
+3. Veya her CREATE TABLE satırını tek tek `patch` ile değiştir (daha güvenli)
+4. Denemeden hata alınırsa: dosyadaki `IF NOT EXISTS IF NOT EXISTS`'i `grep` ile bul, sonra `patch` veya `sed 's/IF NOT EXISTS IF NOT EXISTS/IF NOT EXISTS/g'` ile düzelt
+
 ### 1. Projeyi Tanı
 
 ```bash
@@ -88,6 +144,31 @@ CREATE INDEX IF NOT EXISTS idx_kvkk_texts_type ON kvkk_texts(kvkk_type);
 ```
 
 #### f. Trigger Eksiklikleri
+
+#### g. Tüm CREATE TABLE'lara IF NOT EXISTS ekle (Migrasyon Reset Güvencesi)
+
+Migrasyonlar tekrar çalıştırıldığında (volume reset, yeni ortam) `relation already exists` hatası almamak için her CREATE TABLE'da `IF NOT EXISTS` kullan. Aynısı `CREATE INDEX` için de geçerli — index'lerde `relation "idx_xxx" already exists` hatası alınır.
+
+```sql
+-- YANLIŞ:
+CREATE TABLE users ( ... );
+CREATE INDEX idx_users_email ON users(email);
+
+-- DOĞRU:
+CREATE TABLE IF NOT EXISTS users ( ... );
+CREATE INDEX IF NOT EXISTS idx_users_email ON users(email);
+```
+
+**Otomasyon:**
+```bash
+sed -i 's/^CREATE TABLE /CREATE TABLE IF NOT EXISTS /g' supabase/migrations/*.sql
+sed -i 's/^CREATE INDEX /CREATE INDEX IF NOT EXISTS /g' supabase/migrations/*.sql
+```
+
+**⚠️ (Dene) `sed` sonrası ikileme kontrolü yap:** `grep "IF NOT EXISTS IF NOT EXISTS" supabase/migrations/*.sql`. Varsa `sed -i 's/IF NOT EXISTS IF NOT EXISTS/IF NOT EXISTS/g'` ile düzelt. Bu genelde `patch` ile önceden eklenmiş `IF NOT EXISTS`'in üzerine `sed`'in ikinci kez eklemesiyle oluşur.
+
+#### h. Trigger Eksiklikleri
+
 `updated_at` sütunu olan her tabloda trigger olduğunu kontrol et:
 
 ```sql

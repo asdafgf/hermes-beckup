@@ -20,16 +20,16 @@
       "schedule_display": "0 20 * * *",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-11T22:07:38.689523+03:00",
-      "next_run_at": "2026-05-13T20:00:00+03:00",
-      "last_run_at": null,
-      "last_status": null,
+      "next_run_at": "2026-05-14T20:00:00+03:00",
+      "last_run_at": "2026-05-12T20:15:28.338095+03:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "deliver": "local",
@@ -38,5 +38,5 @@
       "workdir": "C:\\Users\\eymen\\AppData\\Local\\hermes"
     }
   ],
-  "updated_at": "2026-05-12T20:00:37.089379+03:00"
+  "updated_at": "2026-05-13T20:00:29.015295+03:00"
 }

@@ -52,4 +52,10 @@ skills/.usage.json
 # Config yedekleri
 config.yaml.bak*
 
+# Geçmiş dosyaları (API key sızma riski)
+.hermes_history
+memories/MEMORY.md
+
 # Obsidian vault (ayrı yerde zaten)
+# State snapshots (API key ve config kopyaları içerir)
+state-snapshots/

@@ -167,3 +167,31 @@ Script şu bileşenlerden oluşur:
 | -1 | Kullanıcı UAC'yi iptal etti (ERROR_CANCELLED = 1223) |
 | -2 | ShellExecuteExW başarısız (başka hata) |
 | 0+ | Script exit code'u (başarılı çalıştı) |
+
+## Rename-Item / Klasör Yeniden Adlandırma (Özel Durum)
+
+Admin yetkisiyle klasör yeniden adlandırma (`Rename-Item`, `mv`) Windows'ta özellikle sorunludur:
+
+**Sık karşılaşılan hata zinciri:**
+1. `git-bash mv` → `Permission denied`
+2. `ctypes.MoveFileExW` (Python) → error code 5 (Access Denied)
+3. `cmd.exe /c rename` → güvenlik taraması engeli
+4. `Rename-Item` (PowerShell) → aynı engel
+
+**Çözüm: process lock'ları önce temizle:**
+```bash
+# Tüm node process'lerini öldür (en sık lock'layan)
+taskkill /F /IM node.exe 2>nul
+
+# VS Code kapat (varsa)
+taskkill /F /IM code.exe 2>nul
+```
+
+**Hala olmazsa — son çareler:**
+- `.bat` dosyası yaz → kullanıcıdan Admin çalıştırmasını iste
+- Kullanıcıya manuel PowerShell komutu ver:
+  ```powershell
+  Rename-Item -Path "C:\Users\eymen\eski_klasor" -NewName "yeni_klasor" -Force
+  ```
+- Zip yedekten yeni isimle çıkart (rename yerine extract + yeni isim)
+- Yeni boş klasör oluştur, tüm dosyaları `write_file` ile teker teker kopyala

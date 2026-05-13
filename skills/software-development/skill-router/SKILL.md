@@ -266,9 +266,76 @@ Kullanici onaylarsa zinciri baslat. "Duzenle" derse hangi adimi degistirmek iste
 | llm-wiki | LLM bilgi | Bilgi |
 | polymarket | Tahmin piyasasi | Veri |
 
+### Guvenlik (security/)
+| Skill | Ne Yapar | Cikti |
+|---|---|---|
+| codeql | CodeQL taramasi | SARIF raporu |
+| semgrep | Semgrep taramasi | Bulgu listesi |
+| c-review | C/C++ guvenlik incelemesi | Rapor |
+| variant-analysis | Variant analizi | Benzer hata modeli |
+| differential-review | Differential PR review | Review raporu |
+| property-based-testing | Property-based test | Test kodu |
+| sarif-parsing | SARIF dosya isleme | Filtrelenmis bulgu |
+| supply-chain-risk-auditor | Bagimlilik guvenligi | Risk raporu |
+
+### Sentry (sentry/)
+| Skill | Ne Yapar | Cikti |
+|---|---|---|
+| code-review | Kod inceleme | Review yorumu |
+| security-review | Guvenlik review | Bulgu raporu |
+| find-bugs | Hata avi | Bug raporu |
+| gha-security-review | GitHub Actions guvenligi | Guvenlik raporu |
+| django-access-review | Django yetki kontrolu | Erisim raporu |
+| prompt-optimizer | Prompt iyilestirme | Optimize prompt |
+
+### Expo (expo/)
+| Skill | Ne Yapar | Cikti |
+|---|---|---|
+| building-native-ui | Expo native UI gelistirme | Kod |
+| expo-api-routes | API route yapilandirmasi | Route kodu |
+| expo-cicd-workflows | EAS CI/CD | YML dosyasi |
+| expo-deployment | Expo deploy | Yayin |
+| expo-dev-client | Dev client yapilandirma | Config |
+| expo-module | Expo modulu olusturma | Modul kodu |
+| expo-tailwind-setup | Tailwind yapilandirma | Config |
+| expo-ui-jetpack-compose | Jetpack Compose UI | Kod |
+| expo-ui-swift-ui | SwiftUI bilesen | Kod |
+| native-data-fetching | Expo veri cekme | Kod |
+| upgrading-expo | Expo SDK yukseltme | Migration rehberi |
+| use-dom | DOM bilesen kullanimi | Kod |
+| eas-update-insights | EAS Update analizi | Rapor |
+
+### Cloudflare (cloudflare/)
+| Skill | Ne Yapar | Cikti |
+|---|---|---|
+| agents-sdk | Cloudflare Agents SDK | Worker kodu |
+| cloudflare | Genel Cloudflare rehberi | Config |
+| cloudflare-email-service | Email yonlendirme | Email route |
+| durable-objectes | DO yapilandirmasi | Worker kodu |
+| sandbox-sdk | Sandbox SDK | Worker kodu |
+| web-perf | Web performans | Rapor |
+| workers-best-practices | Workers en iyi uygulama | Kod |
+| wrangler | Wrangler CLI | Config |
+
+### Stripe (stripe/)
+| Skill | Ne Yapar | Cikti |
+|---|---|---|
+| stripe-best-practices | Stripe entegrasyon best practices | Kod |
+| stripe-projects | Stripe proje yonetimi | Ayarlar |
+| upgrade-stripe | Stripe SDK/API yukseltme | Migration kodu |
+
+### Anthropic Dokuman (anthropic/)
+| Skill | Ne Yapar | Cikti |
+|---|---|---|
+| docx | Word belgesi olusturma | .docx dosyasi |
+| pptx | PowerPoint sunum olusturma | .pptx dosyasi |
+| xlsx | Excel tablosu olusturma | .xlsx dosyasi |
+| pdf | PDF isleme | .pdf dosyasi |
+
 ### Yazilim Gelistirme
 | Skill | Ne Yapar | Cikti |
 |---|---|---|
+| hermes-gemini-copilot | Gemini hata cozum dongusu | Calisan kod |
 | kod-yaz-calistir-hata-ayikla-dongusu | Kod dongusu | Kod |
 | nexus-core | OMEGA protokolu | Yanit |
 | plan | Gorev plani | Plan |

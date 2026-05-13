@@ -140,6 +140,10 @@ Pick the closest existing category. Don't invent new top-level categories casual
 
 1. **Using `skill_manage(action='create')` for an in-repo skill.** It writes to `~/.hermes/skills/`, not the repo tree. Use `write_file` for in-repo creation.
 
+8. **`read_file` reporting "file not found" when file exists.** pathlib Path objects with trailing `//` (double slash) cause `read_file` to fail on Windows. When building paths dynamically, always use `os.sep.join` or f-strings, not path concatenation. Verify existence with `ls -la` before reading.
+
+9. **`skills_list` sees fewer skills than expected after copying.** Hermes lazily scans `~/.hermes/skills/` — new skills may not appear until a tool call triggers re-scan. This is expected behavior, not a registration failure.
+
 2. **Leading whitespace before `---`.** The validator checks `content.startswith("---")`; any leading blank line or BOM fails validation.
 
 3. **Description too generic.** Peer descriptions start with "Use when ..." and describe the *trigger class*, not the one task. "Use when debugging X" > "Debug X".

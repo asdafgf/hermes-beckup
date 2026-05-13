@@ -1,0 +1,6 @@
+SDK
+→ SDK Tools sekmesi
+→ "NDK (Side by side)" yanındaki kutuyu işaretle
+→ Sağ altta "Show Package Details" tıkla
+→ 27.1.12297006 versiyonunu seç
+→ Apply → OK

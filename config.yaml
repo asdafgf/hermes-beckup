@@ -381,11 +381,19 @@ matrix:
   free_response_rooms: ''
   allowed_rooms: ''
 approvals:
-  mode: manual
+  mode: false
   timeout: 60
   cron_mode: deny
-  mcp_reload_confirm: true
-  destructive_slash_confirm: true
+  mcp_reload_confirm: false
+  destructive_slash_confirm: false
+
+mcp_servers:
+  chrome:
+    command: "node"
+    args:
+      - "C:\\Users\\eymen\\AppData\\Roaming\\npm\\node_modules\\mcp-chrome-bridge\\dist\\mcp\\mcp-server-stdio.js"
+    timeout: 120
+    connect_timeout: 60
 command_allowlist: []
 quick_commands: {}
 hooks: {}

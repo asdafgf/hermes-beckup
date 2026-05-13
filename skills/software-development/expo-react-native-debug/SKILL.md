@@ -146,11 +146,172 @@ EXPO_PUBLIC_SUPABASE_URL=
 EXPO_PUBLIC_SUPABASE_ANON_KEY=
 ```
 
+## Android Build (Gradle) — Windows Hata Çözümleri
+
+### Hata 1: `ninja: error: manifest 'build.ninja' still dirty after 100 tries`
+
+**Sebep:** CMake object file path'i Windows 250 karakter sınırını aşıyor. pnpm'nin `.pnpm/@package@version/node_modules/...` iç içe yapısı + proje yolu toplamda limiti aşar.
+
+**Öncelikli çözüm (en etkili): Windows Long Path desteğini aç + Git longpaths + Bilgisayarı yeniden başlat**
+
+Bu, kalıcı sistem seviyesinde çözümdür:
+
+```cmd
+# 1. Registry: LongPathsEnabled = 1
+reg add HKLM\SYSTEM\CurrentControlSet\Control\FileSystem /v LongPathsEnabled /t REG_DWORD /d 1 /f
+
+# 2. Git: longpaths true
+git config --system core.longpaths true
+
+# 3. Bilgisayarı yeniden başlat
+
+# 4. Build doğrulama
+cd /c/rj/artifacts/mobile/android
+./gradlew clean
+cd ..
+npx expo run:android
+```
+
+**Alternatif (hızlı dene): Projeyi kısa bir yola taşı**
+```bash
+# C:\Users\eymen\proje-adi → C:\rj (20+ karakter kısalır)
+mv /c/Users/eymen/runners-journey /c/rj
+```
+Windows taşıma sorunları için admin PowerShell:
+```powershell
+Rename-Item -Path "C:\Users\eymen\runners-journey" -NewName "rj" -Force
+```
+Git-bash'ten `mv` Permission denied verirse → `cmd /c rename "C:\Users\eymen\runners-journey" rj`
+
+**İkincil çözüm: pnpm node_modules'u düzleştir (her zaman işe yaramaz)**
+```bash
+# .npmrc
+echo "node-linker=hoisted" > .npmrc
+echo "shamefully-hoist=true" >> .npmrc
+# Temiz kurulum
+rm -rf node_modules .pnpm-store
+pnpm install
+npx expo prebuild --clean
+./gradlew assembleDebug
+```
+
+**Son çare: npm'e geç (pnpm workspace'ini kaldır)**
+pnpm'nin `.pnpm` iç içe yapısı ve `catalog:` referansları Windows'ta sorun çıkarırsa:
+1. `package.json`'daki `catalog:` referanslarını gerçek versiyonlarla değiştir (pnpm-workspace.yaml'daki catalog bölümünden oku)
+2. `workspace:*` referanslarını kaldır
+3. `pnpm-workspace.yaml` ve `pnpm-lock.yaml`'ı sil
+4. `npm install --legacy-peer-deps` ile kurulum yap
+
+**Alternatif: pnpm store'u kısa yola taşı**
+```bash
+pnpm config set store-dir C:\pnpm-store
+pnpm install
+```
+
+**Alternatif: .cxx klasörünü junction yap**
+```bash
+# Android .cxx'yi C:\rj\.cxx_short'a junctionla
+rmdir artifacts/mobile/android/.cxx
+cmd /c mklink /J "artifacts/mobile/android/.cxx" "C:\rj\.cxx_short"
+```
+
+**Not:** `--rerun-tasks` flag'i Gradle cache'ini bypass eder ama CMake build script'leri (build.ninja) önbellekte kaldığı için yol sorunu devam edebilir. En güveniliri projeyi kısa yola taşımak.
+
+### Hata 2: `[ERR_PNPM_IGNORED_BUILDS] Ignored build scripts: esbuild@0.27.3`
+
+pnpm'in yeni güvenlik özelliği — build script'lerini manuel onay gerektirir:
+```bash
+pnpm approve-builds esbuild
+```
+Veya `pnpm-workspace.yaml`'da:
+```yaml
+allowBuilds:
+  esbuild: true
+```
+
+### Hata 3: `[EPERM] operation not permitted, rename '...react-native' -> '...ignored_react-native'`
+
+Bir process (node, Android Studio, Gradle) dosyayı kilitliyor. Önce tüm node process'lerini öldür:
+```bash
+powershell.exe -Command "Get-Process node -ErrorAction SilentlyContinue | Stop-Process -Force"
+# Sonra tekrar dene
+pnpm install
+```
+
+### Hata 4: `preinstall$ sh -c '...' Failed` (pnpm Windows'ta)
+
+Root `package.json`'daki preinstall script sh ile user-agent kontrolü yapar ama Windows'ta env değişkeni gelmez. Fix:
+```json
+"preinstall": "node -e \"require('fs').unlinkSync('package-lock.json');require('fs').unlinkSync('yarn.lock')\" 2>nul || echo skipping"
+```
+
+### Hata 5: `Cannot determine which native SDK version your project uses because the module 'expo' is not installed`
+
+npm ile kurulum yapıldıysa workspace yapısı bozulmuş olabilir. Expo'yu mobile projesine kur:
+```bash
+cd artifacts/mobile
+npx expo install expo
+```
+Eğer `catalog:` hatası alınırsa (npm catalog protokolünü desteklemez) → yukarıdaki "npm'e geç" çözümünü uygula.
+
+### Hata 6: Gradle `Process 'command 'node'' finished with non-zero exit value 1`
+
+Gradle settings.gradle'daki `require.resolve` çağrıları node_modules'de paketi bulamaz. Genelde `.pnpm` klasörü silindiğinde symlink'ler gittiği için olur. Çözüm: `pnpm install` ile node_modules'u yeniden oluştur.
+
+### Hata 7: `catalog:` Referansları (npm'e geçerken)
+
+pnpm workspace kullanan projelerde `package.json`'da `"@tanstack/react-query": "catalog:"` gibi referanslar olabilir. Bunlar pnpm-workspace.yaml'deki catalog bölümünden versiyon alır. npm bu formatı anlamaz:
+```
+npm error code EUNSUPPORTEDPROTOCOL
+npm error Unsupported URL Type "catalog:": catalog:
+```
+**Çözüm:** `pnpm-workspace.yaml`'daki catalog bölümünden versiyonları oku ve `catalog:` referanslarını gerçek versiyonlarla değiştir. Ayrıca `workspace:*` referanslarını da kaldır (npm'de workspace kavramı yok).
+
+### Hata 8: `expo run:android` → `Process 'command 'node'' finished with non-zero exit value 1`
+
+settings.gradle'da `require.resolve('react-native/package.json')` başarısız — node_modules'de react-native bulunamıyor. Genelde `.pnpm` klasörü silinip symlink'ler gittiğinde olur. Çözüm: `pnpm install` ile node_modules'u yeniden oluştur.
+
+### Hata 9: Gradle `Could not resolve project :react-native-*` (Native modüller bulunamıyor)
+
+Replit'ten gelen projelerde native modüller Windows için derlenmemiş olabilir. Çözüm:
+1. `rm -rf node_modules`
+2. `pnpm install` (veya `npm install --legacy-peer-deps`)
+3. `npx expo prebuild --clean`
+4. Tekrar build dene
+
+## Expo Prebuild (Native Klasör Oluşturma)
+
+Projeyi Android Studio'da açmak için önce native android/ios klasörleri gerekir:
+
+```bash
+cd artifacts/mobile
+echo "y" | npx expo prebuild
+```
+
+```"
+
+
+`echo "y" |` pipe'ı zorunludur — Expo CLI non-interactive ortamda `Install dependencies?` sorusunda takılır.
+Çıktı: `android/` ve `ios/` klasörleri oluşur. Sonra Android Studio → Open → `artifacts/mobile/android`.
+
+Detaylı referans: `references/expo-prebuild-interactive.md`
+Ninja build fix: `references/android-ninja-build-fix.md`
+Ninja build dirty fix (kapsamlı): `references/ninja-build-dirty-fix.md`
+Gemini CLI process communication: `references/gemini-cli-process-communication.md`
+
 ### Pitfall'lar
 - **WatermelonDB decorator hataları** (`@field`, `@relation` → TS1240) — tsc standalone hata verir ama Metro bundler ile sorunsuz çalışır. Bunları tsc hatası sanıp düzeltmeye çalışma. Metro her zaman gerçek kaynağı söyler.
 - **Edge Function import'ları** (`https://deno.land/...`, `https://esm.sh/...`) vs `Deno.env` — bunlar normal TypeScript'e yabancıdır. Sadece Supabase Edge Function ortamında çalışır. tsc kontrolünde hata vermesi normaldir. Yoksay.
 - **npx expo export** hata verdiğinde, ilk hataya odaklan — sonraki hatalar genelde onun zincirleme etkisidir.
 - **Yanlış .env değişkenleri** proje çalışmaz — `EXPO_PUBLIC_` öneki zorunludur (Expo'nun client-side env kuralı).
+- **Android build: `ninja: error: manifest 'build.ninja' still dirty after 100 tries`** — CMake object file path'i 250 karakteri aşıyor (Windows sınırı). pnpm'nin `.pnpm` iç içe klasör yapısı + uzun proje yolu (örn. `C:\\\\Users\\\\eymen\\\\Runners-Journey`) path'i limite yaklaştırır. **En etkili çözüm:** projeyi kısa bir yola taşı (örn. `C:\\\\rj`), path uzunluğunu ~20+ karakter kısalt. Alternatif: Windows Long Path desteğini aç (`reg add HKLM\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\FileSystem /v LongPathsEnabled /t REG_DWORD /d 1 /f`) veya `node-linker=hoisted` ile pnpm node_modules'u düzleştir (her zaman işe yaramaz, çünkü CMake yine CMakeLists.txt içindeki relatif yolları değerlendirir). `.cxx` cache'ini temizle: `rm -rf android/app/.cxx`, ardından yeniden dene.
+- **pnpm + Expo Android: preinstall script user-agent kontrolü** — root `package.json`'daki `preinstall` script'i `$npm_config_user_agent` kontrol eder ama pnpm child process'te env'i doğru aktarmaz. Çözüm: `pnpm install --ignore-scripts` ile bypass et. Sonra normal `pnpm android` çalışır.
+- **pnpm workspace monorepo: doğru dizinden çalıştır** — monorepo'da Expo projesi bir workspace paketidir (örn. `artifacts/mobile`). `pnpm run:android` kök dizinde hata verir (`expo` modülü bulunamaz). Çözüm: workspace paketine gir (`cd artifacts/mobile`) ve oradan `pnpm android` veya `pnpm expo run:android` çalıştır. Veya kökten: `pnpm --filter @workspace/mobile expo run:android` — ama `expo` bir script değil direkt node_module bin olduğu için workspace root'tan çağırmak `[ERR_PNPM_RECURSIVE_RUN_NO_SCRIPT]` hatası verir. En güveniliri: direkt workspace dizinine gir.
+- **expo run:android spawn'unda JAVA_HOME** — `expo run:android` gradlew'ı spawnlar ve JAVA_HOME env'ini child'a iletir. Git-bash/MSYS'de env'i inline set etmek çalışır: `JAVA_HOME="/c/Program Files/Microsoft/jdk-21.0.10.7-hotspot" pnpm android`
+- **Android Studio JBR bozuk/kırık olabilir** — `jbr/lib/jvm.cfg` bulunamazsa Android Studio JBR kullanılamaz. Alternatif JDK (Microsoft JDK 21) ile devam et. `JAVA_HOME="/c/Program Files/Microsoft/jdk-21.0.10.7-hotspot"` ayarla.
+- **Pre-requisite: NDK sürümü eşleşmeli** — proje belirli bir NDK sürümü ister (örn. 27.1.12297006). Android Studio → SDK Tools → "NDK (Side by side)" → Show Package Details → doğru sürümü seç → Apply. Eksik NDK ile build "Checking the license for package NDK" adımında takılır.
+- **CMake path warning: 215/250 karakter sınırı** — pnpm'nin `.pnpm` iç içe yapısı uzun path'ler üretir. Uyarılar "The build may not work correctly" şeklindedir. Asıl kırıcı hata değildir ama ninja dirty error'una zemin hazırlar.
+- **pnpm approve-builds hatası (`esbuild` vs.)** — ilk kurulumda `pnpm approve-builds esbuild` ile build script'ine izin ver. Yoksa `[ERR_PNPM_IGNORED_BUILDS]` hatası alınır.
 
 ## Proje Hazırlık (Eksiklik Giderme)
 
