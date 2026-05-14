@@ -1,0 +1,25 @@
+---
+name: previous-video-got
+description: "In a previous video, we got a In a previous video, we got a In a previous video, we got a behind-the"
+version: 1.0
+category: security
+source: "https://youtu.be/KZoeP7YGnHo"
+tags: [ai, password, john-hammond]
+---
+
+# In a previous video, we got a In a previous video, we got a In a previous video,
+
+**Kaynak:** [YouTube](https://youtu.be/KZoeP7YGnHo) | **Kanal:** john-hammond
+
+---
+
+## 📝 Transcript Özeti
+
+In a previous video, we got a In a previous video, we got a In a previous video, we got a behind-the-scenes look at a digital behind-the-scenes look at a digital behind-the-scenes look at a digital online scam because a viewer who online scam because a viewer who online scam because a viewer who happened to be a WordPress hosting happened to be a WordPress hosting happened to be a WordPress hosting provider and administrator was willing provider and administrator was willing provider and administrator was willing to share some server-side code, PHP, to share some server-side code, PHP, to share some server-side code, PHP, HTML, everything on the back end that HTML, everything on the back end that HTML, everything on the back end that anyone wouldn't be able to see unless anyone wouldn't be able to see unless anyone wouldn't be able to see unless they had access to the server, the they had access to the server, the they had access to the server, the computer, the device itself. And that computer, the device itself. And that computer, the device itself. And that was awesome enough as it is, but was awesome enough as it is, but was awesome enough as it is, but something even more incredible is that something even more incredible is that something even more incredible is that they sent us even more. Take a look at they sent us even more. Take a look at they sent us even more. Take a look at this email. No honor among thieves, they this email. No honor among thieves, they this email. No honor among thieves, they are signing their WordPress scripts to are signing their WordPress scripts to are signing their WordPress scripts to get credit. Hey, I came across a few get credit. Hey, I came across a few get credit. Hey, I came across a few interesting things lately when battling interesting things lately when battling interesting things lately when battling the WordPress fishing sites. I'd email the WordPress fishing sites. I'd email the WordPress fishing sites. I'd email yo
+
+---
+
+## 🔑 Anahtar Kelimeler
+ai, password
+
+---

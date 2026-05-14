@@ -1,14 +1,12 @@
 ---
 name: kod-yaz-calistir-hata-ayikla-dongusu
-description: "Write Python code → run in terminal → catch errors → fix → repeat until passing. Fully automatic — never ask the user to run it themselves."
-version: 2.0.0
+description: "[OBSOLETE — use `python-oto-debug-dongusu` instead] Write Python code → run in terminal → catch errors → fix → repeat until passing. Fully automatic — never ask the user to run it themselves. This skill is kept only for legacy reference. New work: skill_view('python-oto-debug-dongusu')."
+version: 2.0.1
 author: Eymen
 license: MIT
 platforms: [windows]
-metadata:
-  hermes:
-    tags: [vscode, python, debugging, automation, loop]
-    related_skills: [systematic-debugging, request-code-review, gorsel-analiz-protokolu]
+deprecated: true
+superseded_by: python-oto-debug-dongusu
 ---
 
 # Kod Yaz → Çalıştır → Hata Ayıkla → Döngüsü
@@ -69,6 +67,28 @@ Döngü prensibi: Kod yaz → çalıştır → hata → düzelt → çözüm. Sa
 - `systematic-debugging` skill'ini uygula (4 aşamalı)
 - Çözüm için Gemini API'ye sor (tüm traceback'i gönder)
 - Çözülünce prensibi skill olarak kaydet
+
+## Bash Script Pitfalls: Paranthesis in Comments and Echo
+
+**KRITIK:** Windows git-bash'te yorum satirlarinda veya `echo` icinde `(...)` kullanma. Bash parantezleri alt-shell olarak yorumlar:
+- Hatali: `# KONU 3: SIFIR GUVEN (ZERO TRUST)` → `syntax error near unexpected token '('`
+- Hatali: `echo "Sifir Guven (Zero Trust)"` → ayni hata
+- Dogru: `echo "Sifir Guven [Zero Trust]"` veya hic parantez kullanma
+
+**Cozum:** Tum `(...)` kullanimlarini `[...]` ile degistir. Ozellikle:
+- Yorum satirlari (`# ... (aciklama) ...`)
+- `echo` icindeki metinler
+- Fonksiyon cagrilari (`run_safe "metin (detay)"` → `run_safe "metin [detay]"`)
+
+**Retry pattern:** Background script'lerde her soru/soru grubu icin retry mekanizmasi kur:
+- Max 3 deneme, her denemede 5sn bekle
+- 3 kez basarisiz → `ollama serve` yeniden baslat → son kez dene
+- Genel 3 kez reset sonrasi da takilirsa → sifirla ve devam et
+
+**Pacing:** Ollama ardışık sorgularda buffer overflow yasayabilir:
+- Sorular arasina `sleep 3-5` koy
+- Her konu/blog arasi `sleep 3`
+- PTY timeout >60sn olan sorgularda normal moda (pty=false) gec
 
 ## Test Stratejisi (Kullanıcı Tercihi)
 

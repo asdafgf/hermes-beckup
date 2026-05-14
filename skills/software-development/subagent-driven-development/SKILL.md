@@ -252,6 +252,50 @@ git add -A && git commit -m "feat: complete [feature name] implementation"
 - More subagent invocations (implementer + 2 reviewers per task)
 - But catches issues early (cheaper than debugging compounded problems later)
 
+## Delegation Provider Fallbacks
+
+### When `delegate_task` Fails
+
+If `delegate_task` returns a provider error (e.g. `Delegation provider 'X' resolved but has no API key`), the configured delegation provider is missing credentials. Do NOT keep retrying — the error is not transient.
+
+**Fallback ladder:**
+
+1. **Check config:** `hermes config edit` → look under `delegation` section. Set a working provider/key:
+   ```bash
+   hermes config set delegation.provider deepseek
+   hermes config set delegation.api_key sk-your-key
+   ```
+   Or set `delegation.api_key` to an env var name that already has a key.
+
+2. **If no working API key available for delegation** → use terminal-based parallel execution instead of delegate_task:
+   ```bash
+   # Spawn 3 background curl processes to Ollama simultaneously
+   curl -s -X POST http://localhost:11434/api/generate \
+     -H "Content-Type: application/json" \
+     -d '{"model":"qwen2.5-coder:7b","prompt":"...","stream":false,"options":{"num_predict":800,"temperature":0.3}}' \
+     > /path/to/response_N.json 2>&1 &
+   ```
+
+3. **For complex parallel workflows:** write a Python script to disk (via `write_file`) and run it as a background terminal:
+   ```python
+   # write_file to Desktop/task_runner.py
+   # Then: terminal(background=True, command="python3 Desktop/task_runner.py")
+   # Use ThreadPoolExecutor inside the script for true parallelism.
+   ```
+
+4. **As last resort:** run tasks sequentially in the main session with individual tool calls.
+
+**Key insight:** When delegation is broken, the fallback is always `terminal(background=True)` with multiple parallel instances, or a single Python script that handles parallelism internally with `ThreadPoolExecutor`.
+
+### Qwen2.5-Coder Specific Issues (when using as fallback)
+
+When using Ollama's Qwen2.5-Coder from subprocesses or background tasks:
+
+- **Timeout on complex prompts** (>600 output tokens): Qwen 7B takes 60-180s per generate call. Set `num_predict` ≤ 800 and `timeout` ≥ 180s.
+- **Parenthesis in bash prompts:** MSYS/git-bash interprets parentheses as subshell syntax in inline JSON. Avoid `(` `)` by writing the prompt to a Python script file instead of passing it via curl inline.
+- **Concurrent requests:** Qwen2.5-Coder:7b on single GPU handles only 1 concurrent generate request. Use `Semaphore(1)` when running from multithreaded Python code.
+- **Health check before use:** Always check `curl -s http://localhost:11434/api/tags` before generating. If Ollama is deadlocked: `taskkill //F //IM ollama.exe && ollama serve`.
+
 ## Integration with Other Skills
 
 ### With writing-plans

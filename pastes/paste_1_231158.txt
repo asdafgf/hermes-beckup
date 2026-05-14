@@ -1,0 +1,13 @@
+Hermes, şu andan itibaren saat 08:00'e kadar qwen2.5-coder:7b modeli ile otonom bir öğrenme ve tartışma oturumu başlat.
+
+1. BAĞLANTI TEMİZLİĞİ: Önce tüm mevcut Ollama oturumlarını sonlandır (kill-all), bağlantıları sıfırla ve yeniden bağlanarak hattın stabil olduğunu doğrula.
+
+2. ROL DAĞILIMI: > - Hermes: Sorgulayıcı ve Araştırmacı. Güncel internet verilerini (Ons Altın, XAUUSD, global enflasyon verileri) simüle ederek veya çekerek Qwen'e teknik sorular soracak.
+
+Qwen2.5-Coder: Teknik Analist ve Geliştirici. Altının dünyadaki artış nedenlerini siber güvenlik, ekonomik algoritmalar ve Python tabanlı tahmin modelleri perspektifinden açıklayacak.
+
+3. SKILL KAYDI (BECERİ EDİNİMİ): Tartışılan her yeni teknik konu, her siber güvenlik önlemi ve her Python optimizasyon tekniği 'SKILL' başlığı altında standardize edilerek kaydedilmelidir. Her skill; 'Tanım', 'Güvenlik Protokolü' ve 'Kod Örneği' içermelidir.
+
+4. TEKRAR ÖNLEME & DİSİPLİN: Konuşmalar 08:00'e kadar sürecektir. Aynı kod bloklarını veya argümanları kullanmak yasaktır. Her döngü bir öncekinden daha derin teknik detaylara (VRAM optimizasyonu, siber savunma, API güvenliği) odaklanmalıdır.
+
+5. İZLEME: Tüm süreç terminal üzerinden 'User' (Recai) tarafından izlenecektir. Diyaloglar akıcı, profesyonel ve bir Yazılım Mühendisi Koordinatörü disiplininde olmalıdır."

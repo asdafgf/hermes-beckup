@@ -20,15 +20,15 @@
       "schedule_display": "0 20 * * *",
       "repeat": {
         "times": null,
-        "completed": 1
+        "completed": 2
       },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
+      "enabled": false,
+      "state": "paused",
+      "paused_at": "2026-05-14T18:50:41.087536+03:00",
       "paused_reason": null,
       "created_at": "2026-05-11T22:07:38.689523+03:00",
       "next_run_at": "2026-05-14T20:00:00+03:00",
-      "last_run_at": "2026-05-12T20:15:28.338095+03:00",
+      "last_run_at": "2026-05-13T20:03:03.859968+03:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -36,7 +36,333 @@
       "origin": null,
       "enabled_toolsets": null,
       "workdir": "C:\\Users\\eymen\\AppData\\Local\\hermes"
+    },
+    {
+      "id": "73278b7f12c7",
+      "name": "qwen-otonomegitim-raporu",
+      "prompt": "Saat 08:10. Qwen otonom \u00f6\u011frenme oturumu tamamland\u0131.\n\nG\u00f6revin:\n1. Raporu oku: ~/.hermes/scripts/.qwen_report_v2\n2. Skill'leri listele: ls ~/.hermes/skills/security/ | grep -v '\\.'\n3. Telegram'a \u015fu formatta rapor g\u00f6nder:\n\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n\ud83c\udf19 OTONOM \u00d6\u011eRENME RAPORU\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n\n\u23f0 Tarih: [tarih]\n\ud83d\udcca Toplam: [say\u0131] konu\n\n\u2501\u2501\u2501 KONULAR \u2501\u2501\u2501\n[her skill i\u00e7in: id | ba\u015fl\u0131k]\n\n\u2501\u2501\u2501 SONRAK\u0130 ADIMLAR \u2501\u2501\u2501\nBu gece \u00f6\u011frenilenler incelenebilir.\nDetay: ~/.hermes/skills/security/<skill>/references/qwen_yanit.txt",
+      "skills": [
+        "qwen-siber-denetim"
+      ],
+      "skill": "qwen-siber-denetim",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "10 8 * * *",
+        "display": "10 8 * * *"
+      },
+      "schedule_display": "10 8 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": false,
+      "state": "paused",
+      "paused_at": "2026-05-14T18:50:42.122326+03:00",
+      "paused_reason": null,
+      "created_at": "2026-05-13T23:25:36.388610+03:00",
+      "next_run_at": "2026-05-15T08:10:00+03:00",
+      "last_run_at": "2026-05-14T08:11:05.106855+03:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "all",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "2a773fa8e146",
+      "name": "siber-guvenlik-gece-cron",
+      "prompt": "Siber g\u00fcvenlik gece oturumunu kontrol et. Background PTY s\u00fcreci (proc_5a4348e9d7ff) \u00e7al\u0131\u015f\u0131yorsa durumunu bildir. \u00c7al\u0131\u015fm\u0131yorsa yeniden ba\u015flat: bash ~/.hermes/scripts/siber-guvenlik-gece.sh (arkaplan, pty=true, timeout=36000). G\u00fcncel konu ve ilerleme durumunu \u00f6zetle. 3 kez tak\u0131lma varsa Ollama'y\u0131 yeniden ba\u015flat. Toplam: 15 konu, ~90 soru.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 0,1,2,3,4,5,6,7,8 * * *",
+        "display": "0 0,1,2,3,4,5,6,7,8 * * *"
+      },
+      "schedule_display": "0 0,1,2,3,4,5,6,7,8 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 9
+      },
+      "enabled": false,
+      "state": "paused",
+      "paused_at": "2026-05-14T18:45:31.163940+03:00",
+      "paused_reason": null,
+      "created_at": "2026-05-13T23:41:00.026709+03:00",
+      "next_run_at": "2026-05-15T00:00:00+03:00",
+      "last_run_at": "2026-05-14T08:02:38.897350+03:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "6328823909",
+        "chat_name": "Q !",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "30d600583ad1",
+      "name": "qwen-skill-derin-dogrulama",
+      "prompt": "Saat $(date '+%H:%M'). Skill derin do\u011frulama oturumu.\n\n\u0130lk ad\u0131m: ~/.hermes/scripts/.verify_ilerleme dosyas\u0131n\u0131 kontrol et. Yoksa olu\u015ftur: \"0\" yaz.\n\u0130\u00e7indeki say\u0131y\u0131 oku (N). Bu, do\u011frulanacak s\u0131radaki skill index'i.\n\n\u0130kinci ad\u0131m: Skill listesini al:\nls -d ~/.hermes/skills/security/*/\nBu listeyi s\u0131rala, N. s\u0131radaki skill'i se\u00e7.\n\n\u00dc\u00e7\u00fcnc\u00fc ad\u0131m: Skill i\u00e7eri\u011fini oku:\n- SKILL.md'den ba\u015fl\u0131k ve \u00f6zet\n- references/qwen_yanit.txt (varsa)\n- references/diyalog.txt (varsa)\n- references/qwen_yanit_dogrulanmis.txt (varsa)\n\nD\u00f6rd\u00fcnc\u00fc ad\u0131m: Bu skill'deki t\u00fcm bilgileri qwen2.5-coder'a g\u00f6ndererek DER\u0130NLEMES\u0130NE do\u011frulat:\ncurl -s --max-time 180 -X POST http://localhost:11434/api/generate -d '{\"model\":\"qwen2.5-coder:7b\",\"prompt\":\"\u015eu konuyu detayl\u0131 do\u011frula. Do\u011fru/yanl\u0131\u015f her noktay\u0131 belirt. Yanl\u0131\u015f varsa d\u00fczelt: [KONU BASLIGI + ICERIK]\",\"stream\":false}'\n\nBe\u015finci ad\u0131m: Sonucu skill dizinine kaydet:\necho \"DOGRULAMA $(date): [sonuc]\" > ~/.hermes/skills/security/[SKILL_ADI]/references/qwen_derin_dogrulama.txt\n\nAlt\u0131nc\u0131 ad\u0131m: \u0130lerleme dosyas\u0131n\u0131 g\u00fcncelle (N+1 yaz).\n\nYedinci ad\u0131m: Telegram'a k\u0131sa rapor g\u00f6nder:\n\"[SKILL_ADI] derin do\u011frulama tamam. S\u0131radaki: [sonraki_skill]\"\n\nE\u011fer t\u00fcm skill'ler bittiyle (index > toplam skill say\u0131s\u0131), \"T\u00dcM SKILL'LER DO\u011eRULANDI \u2705\" yaz ve dur.",
+      "skills": [
+        "qwen-siber-denetim",
+        "qwen-ailesi"
+      ],
+      "skill": "qwen-siber-denetim",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9,10,11,12,13,14,15,16 * * *",
+        "display": "0 9,10,11,12,13,14,15,16 * * *"
+      },
+      "schedule_display": "0 9,10,11,12,13,14,15,16 * * *",
+      "repeat": {
+        "times": 30,
+        "completed": 5
+      },
+      "enabled": false,
+      "state": "paused",
+      "paused_at": "2026-05-14T18:50:36.915923+03:00",
+      "paused_reason": null,
+      "created_at": "2026-05-14T00:15:13.455824+03:00",
+      "next_run_at": "2026-05-15T09:00:00+03:00",
+      "last_run_at": "2026-05-14T13:01:02.322787+03:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: HTTP 402: Insufficient Balance",
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "750ff5bb95b4",
+      "name": "ogrenim-durum-raporu",
+      "prompt": "Saat $(date '+%H:%M'). \u00d6\u011frenim durum raporu haz\u0131rl\u0131yorum.\n\nG\u00d6REV:\n1. Skill say\u0131s\u0131n\u0131 hesapla: ls ~/.hermes/skills/security/ | grep -v '\\.' | wc -l\n2. Kategori da\u011f\u0131l\u0131m\u0131n\u0131 \u00e7\u0131kar:\n   - WiFi: ls | grep wifi | wc -l\n   - Android: ls | grep android | wc -l\n   - Python: ls | grep -E '^python' | wc -l\n   - Sald\u0131r\u0131: ls | grep -E 'saldiri|hack' | wc -l\n   - \u0130leri: ls | grep -E 'ileri|zero|ai-' | wc -l\n   - KVKK/OSINT: ls | grep -E 'kvkk|osint|kisisel|sosyal|telefon|kimlik' | wc -l\n   - Kripto: ls | grep -E 'kripto|lockbit|badusb' | wc -l\n3. Son 3 skill'in ad\u0131n\u0131 g\u00f6ster\n4. Telegram'a \u015fu formatta rapor g\u00f6nder:\n\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n\ud83d\udcca \u00d6\u011eREN\u0130M DURUM RAPORU \u2014 $(date '+%H:%M')\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n\n\ud83d\udcc1 Toplam skill: [say\u0131]\n\n\ud83d\udcc2 KATEGOR\u0130 DA\u011eILIMI:\n\ud83d\udfe6 WiFi: [say\u0131]\n\ud83d\udfe2 Android: [say\u0131]\n\ud83d\udc0d Python: [say\u0131]\n\ud83d\udd34 Sald\u0131r\u0131: [say\u0131]\n\ud83d\udfe3 \u0130leri: [say\u0131]\n\ud83d\udfe1 KVKK/OSINT: [say\u0131]\n\ud83d\udcb0 Kripto: [say\u0131]\n\n\ud83c\udd95 Son eklenenler:\n[son 3]\n\n\u23f0 Bir sonraki rapor: +1 saat\n\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 1,2,3,4,5,6,7,8 * * *",
+        "display": "0 1,2,3,4,5,6,7,8 * * *"
+      },
+      "schedule_display": "0 1,2,3,4,5,6,7,8 * * *",
+      "repeat": {
+        "times": 12,
+        "completed": 2
+      },
+      "enabled": false,
+      "state": "paused",
+      "paused_at": "2026-05-14T18:50:37.952447+03:00",
+      "paused_reason": null,
+      "created_at": "2026-05-14T06:49:31.861530+03:00",
+      "next_run_at": "2026-05-15T01:00:00+03:00",
+      "last_run_at": "2026-05-14T08:01:13.441373+03:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "all",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "2dd0ffc2fa56",
+      "name": "yazilim-ogrenim-saatlik",
+      "prompt": "Yazilim ogrenim raporu hazirla:\n\n1. Desktop/yazilim_ogrenim/ klasorundeki progress.json dosyasini oku\n2. En son .md dosyasini bul ve icerigini oku\n3. Bana su formatta rapor ver:\n\n\ud83d\udcd8 **Yaz\u0131l\u0131m Geli\u015ftirme \u00d6\u011frenim Raporu \u2014 {tarih}**\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n**\ud83d\udcda Konu {s\u0131ra}/{toplam}:** {konu_ba\u015fl\u0131\u011f\u0131}\n\n**\u00d6\u011frenilenler:** {konunun 2-3 c\u00fcmle \u00f6zeti}\n\n**Kod \u00d6rne\u011fi:** {en dikkat \u00e7ekici kod par\u00e7as\u0131}\n\n**\ud83d\udca1 Best Practice:** {\u00f6\u011frenilen en \u00f6nemli pratik}\n\n**\ud83d\udcc1 \u0130lerleme:** {y\u00fczde}%\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n\nEger script calismamissa hatayi bildir. Saat 17:00'dan sonra rapor gondersen de calismazsa sorun yok - o gunluk ogrenim bitmistir.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "yazilim_ogrenim.sh",
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8,9,10,11,12,13,14,15,16,17 * * *",
+        "display": "0 8,9,10,11,12,13,14,15,16,17 * * *"
+      },
+      "schedule_display": "0 8,9,10,11,12,13,14,15,16,17 * * *",
+      "repeat": {
+        "times": 10,
+        "completed": 4
+      },
+      "enabled": false,
+      "state": "paused",
+      "paused_at": "2026-05-14T18:50:38.990811+03:00",
+      "paused_reason": null,
+      "created_at": "2026-05-14T09:45:44.324411+03:00",
+      "next_run_at": "2026-05-15T08:00:00+03:00",
+      "last_run_at": "2026-05-14T13:00:55.524887+03:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: HTTP 402: Insufficient Balance",
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "6328823909",
+        "chat_name": "Q !",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "6b45523ce43d",
+      "name": "skills-otomatik-kayit",
+      "prompt": "Skill listesini g\u00fcncelle: Disk'teki t\u00fcm SKILL.md dosyalar\u0131n\u0131 tara (find ~/AppData/Local/hermes/skills -name \"SKILL.md | wc -l), skills_list ile kar\u015f\u0131la\u015ft\u0131r. Eksik olan varsa skill_view() ile y\u00fcklenmelerini sa\u011fla. Sonra skills_list \u00e7\u0131kt\u0131s\u0131n\u0131 al ve \"SKILL L\u0130STES\u0130 G\u00dcNCELLEND\u0130: X skill\" \u015feklinde rapor ver.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 6 * * *",
+        "display": "0 6 * * *"
+      },
+      "schedule_display": "0 6 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": false,
+      "state": "paused",
+      "paused_at": "2026-05-14T18:50:40.043338+03:00",
+      "paused_reason": null,
+      "created_at": "2026-05-14T10:26:15.072091+03:00",
+      "next_run_at": "2026-05-15T06:00:00+03:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "6328823909",
+        "chat_name": "Q !",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "6b083eefb41a",
+      "name": "super-yonetici",
+      "prompt": "S\u00dcPER Y\u00d6NET\u0130C\u0130'yi \u00e7al\u0131\u015ft\u0131r. Bilgisayardaki t\u00fcm i\u015fleri paralel tespit et ve otomatik yap. Asla kullan\u0131c\u0131ya sorma. Rapor ver: transcript durumu, skill durumu, temizlik.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "super_yonetici.py",
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/5 * * * *",
+        "display": "*/5 * * * *"
+      },
+      "schedule_display": "*/5 * * * *",
+      "repeat": {
+        "times": 96,
+        "completed": 24
+      },
+      "enabled": false,
+      "state": "paused",
+      "paused_at": "2026-05-14T18:45:30.032579+03:00",
+      "paused_reason": null,
+      "created_at": "2026-05-14T11:10:29.991103+03:00",
+      "next_run_at": "2026-05-14T18:50:00+03:00",
+      "last_run_at": "2026-05-14T18:47:23.725128+03:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "6328823909",
+        "chat_name": "Q !",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "277fa1a6e112",
+      "name": "guvenlik-izleme",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "guvenlik_izle.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/15 * * * *",
+        "display": "*/15 * * * *"
+      },
+      "schedule_display": "*/15 * * * *",
+      "repeat": {
+        "times": null,
+        "completed": 7
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-14T18:51:13.198029+03:00",
+      "next_run_at": "2026-05-14T20:30:00+03:00",
+      "last_run_at": "2026-05-14T20:15:40.589905+03:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "6328823909",
+        "chat_name": "Q !",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
     }
   ],
-  "updated_at": "2026-05-13T20:00:29.015295+03:00"
+  "updated_at": "2026-05-14T20:15:40.595261+03:00"
 }

@@ -1,0 +1,5 @@
+# Video: Hermes The Self Improving AI Agent — Transcript
+URL: https://youtu.be/lbqysOjR8SU
+Kaynak: YouTube (Ingilizce)
+
+00:00 In the rapidly evolving world of artificial intelligence, a remarkable new agent has emerged from Nous Research. Meet Hermes, the self-improving AI companion designed to grow with you. Hermes arrives with over 70 built-in skills, persistent cross-session memory, and the extraordinary ability to automatically create and refine new skills from every interaction. Powered seamlessly, no longer just a tool, Hermes becomes an extension of your mind, adapting, remembering, and advancing alongside you. One simple command unlocks an AI that truly grows with every conversation.

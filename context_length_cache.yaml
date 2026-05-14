@@ -1,0 +1,3 @@
+context_lengths:
+  gemma3:4b@http://localhost:11434/v1: 131072
+  hermes3@http://localhost:11434/v1: 131072

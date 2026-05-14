@@ -1,12 +1,13 @@
 ---
 name: hermes-gemini-copilot
-title: Hermes ↔ Gemini otonom hata çözüm döngüsü (3-2-1 kuralı)
-description: Hermes sorunu kendi çözmeye çalışır (2 deneme), çözemezse Chrome'daki Gemini sohbetine hatayı gönderir, Gemini'nin kodunu alır, VS Code projesine yazar, çalıştırır, çıktıyı Gemini'ye verir. Çözüm bulunana kadar döngü. Otomatik, kullanıcıya sormaz.
+title: "Hermes <> LLM Otonom Isbirligi Donguleri (Gemini / Ollama)"
+description: "Hermes'in harici LLM'lerle konusarak gorev cozdugu veya kendini gelistirdigi donguler. Iki ana varyant: (1) Gemini ile hata cozum dongusu - Chrome CDP uzerinden Gemini sohbetine kod gonderip cozum almak; (2) Ollama ile kendi kendini gelistirme dongusu - Ollama'dan ders alip skill olarak kaydetmek. Ollama varyantinin iki alt turu: genel bilgi aktarimi ve siber guvenlik (100+ konu havuzu, Python kod zorunlu). Otomatik, kullaniciya sormaz."
 category: software-development
 ---
-# Hermes ↔ Gemini Otonom Hata Çözüm Döngüsü
 
-## 3-2-1 Kuralı (Eymen tercihi)
+# Hermes <> LLM Otonom Isbirligi Donguleri
+
+## A. Gemini ile Hata Çözüm Döngüsü (3-2-1 Kuralı)
 
 | Aşama | Ne yapılır |
 |---|---|
@@ -20,234 +21,178 @@ category: software-development
 **Kesin kural 1:** Kullanıcıya sorma. Otomatik yürüt.
 **Kesin kural 2:** VS Code açık mı kontrol et (`ps aux | grep code`) — açıksa yenisini açma, mevcut terminali kullan.
 **Kesin kural 3:** Kodu ben çalıştırıp çıktısını Gemini'ye vermek yerine, kullanıcının VS Code terminalinde görmesini sağla. Ben çıktıyı ayrıca alıp Gemini'ye veririm.
-**Kesin kural 4:** Her seferinde **yeni bir VS Code projesi** aç. Kullanıcı "yeni proje" bekler. Klasör adı her seferinde farklı olsun (örn. `ag-tarama`, `network-scan-v2`).
-**Kesin kural 5:** Kullanıcıya ▶ **Run butonunu** (yeşil oynatma) veya `Ctrl+F5` kullanmasını söyle. Terminal komutu yazdırma yerine VS Code'un kendi run mekanizmasını kullan.
+**Kesin kural 4:** Her seferinde **yeni bir VS Code projesi** aç. Klasör adı her seferinde farklı olsun.
+**Kesin kural 5:** Kullanıcıya ▶ **Run butonunu** kullanmasını söyle.
 
-## Ne Zaman Kullanılır
+## B. Ollama Kendi Kendini Geliştirme Döngüsü
 
-- Bir Python script'i veya terminal komutu hata verdiğinde ve çözüm bulunamadığında
-- Kullanıcı "şu işi yapan bir Python kodu yaz" dediğinde (ilk kodu Hermes yazar, hata alırsa Gemini'ye geçer)
-- Herhangi bir sistem/ağ/Python sorunu çözülmesi gerektiğinde
+Bkz: `references/ollama-self-improvement-loop.md`
 
-## Mimari
+## C. Karşılıklı Diyalog Eğitim Protokolü (Hermes ↔ Qwen2.5-coder)
+
+**Amaç:** Hermes ile Ollama'daki bir model arasında **karşılıklı 2 turlu diyalog** şeklinde yapılandırılmış eğitim oturumu. Her konu için Hermes açılış yapar → model cevaplar → Hermes derinleştirir → model tekrar cevaplar. Tüm diyalog skill olarak kaydedilir.
+
+### Ne Zaman Kullanılır
+
+- Kullanıcı "Hermes ve qwen karşılıklı konuşsun, skill olarak kaydetsin" dediğinde
+- Kullanıcı "sabaha kadar otonom eğitim oturumu başlat" dediğinde
+- 10+ konulu kapsamlı bir alan (siber güvenlik, vb.) öğrenilirken
+- Her konunun skill olarak kalıcı kaydı isteniyorsa
+
+### Mimari
 
 ```
-Hermes (ana)
-  ├── 1. deneme → kendi çöz
-  ├── 2. deneme → farklı çözüm dene
-  ├── 3. deneme →
-  │     Chrome/Gemini sohbetine sorunu yaz (CDP + Playwright)
-  │     Gemini'nin kod cevabını oku (CDP)
-  │     Kodu VS Code projesine yaz (write_file)
-  │     Kullanıcıya VS Code'da ▶ Run yapmasını söyle
-  │     Kullanıcı çıktıyı görsün
-  │     Ben çıktıyı okuyup Gemini'ye geribildirim yap
-  └── Çözüm → bildir
+HERMES (ben)                     QWEN2.5-CODER (Ollama)
+    │                                   │
+    ├─ [Açılış] Konuyu açar,            │
+    │   bağlam verir, sorar ────────────→  Cevap üretir
+    │                                   │
+    │                                   ├─ [Yanıt 1] Döner
+    │←──────────────────────────────────│
+    │                                   │
+    ├─ [Derinleştirme] Analiz eder,    │
+    │   ek soru sorar ─────────────────→  Derin cevap üretir
+    │                                   │
+    │                                   ├─ [Yanıt 2] Döner
+    │←──────────────────────────────────│
+    │                                   │
+    └─ Skill olarak kaydeder            │
+       (SKILL.md + diyalog.txt)         │
 ```
 
-## Ön koşullar
+### Kullanıcı Tercihleri (Bu Oturumdan — ZORUNLU — 14 Mayıs 2026)
 
-- **Chrome** Scoop ile kurulu: `/c/Users/eymen/scoop/apps/googlechrome/148.0.7778.97/chrome.exe`
-- **Playwright** Anaconda Python'da: `/c/Users/eymen/anaconda3/python.exe` ile `import playwright` çalışıyor
-- **CDP port 9222** — açık değilse Chrome'u öldürüp yeniden başlat
-- **VS Code** PATH'te: `code` komutu çalışıyor
+> **Bu tercihler Eymen'in kullandığı her oturumda geçerlidir. Memory'ye de kayıtlıdır ama burada durması skill'i load eden herkesin görmesini sağlar.**
 
-### VS Code açık mı kontrol et (Kesin Kural 2'nin uygulanışı)
+1. **Hız:** Konular arası bekleme MAX 15 saniye. Kullanıcı "ne bekliyorsun" derse çok yavaşsın demektir. 240sn gibi bekleme ASLA.
+2. **Hızlı atlama:** Kullanıcı "2" yazarsa direkt 2. adıma geç. Açıklama beklemez.
+3. **Timeout:** Qwen 2 dakikada cevap vermezse timeout at + yeniden dene. PTY'siz çalıştırıyorsan `curl -X POST http://localhost:11434/api/generate` kullan, `ollama run` ASLA (PTY gerektirir).
+4. **İlerleme sayacı:** Her konu sonunda `#01/29 (%3)` formatında göster. Yoksa "takıldın" sanar.
+5. **Diyalog formatı:** Monolog değil, karşılıklı konuşma. Hermes AKTİF soru sormalı.
+6. **İnternetten konu bulma:** Önceden yazılmış konular tükenince `web_search` ile yeni konu bul, hemen qwen'e sor.
+
+### Protokol Şablonu
 
 ```bash
-# VS Code process var mı?
-ps aux | grep -i code | grep -v grep | wc -l
-# 0 ise → yenisini aç
-# 1+ ise → mevcut olanı kullan, yenisini açma
-```
+# Her konu: ID|KATEGORI|BASLIK|HERMES_ACILIS|HERMES_DERIN
+KONULAR=(...)
 
-## Adımlar (detaylı)
+# Qwen'e sor — curl ile REST API (PTY gerektirmez)
+qwen_sor() {
+  local prompt="$1"
+  local payload=$(python -c "import json; print(json.dumps({'model':'qwen2.5-coder:7b','prompt':'''$prompt''','stream':False}))")
+  local response=$(curl -s --max-time 120 -X POST http://localhost:11434/api/generate -d "$payload")
+  echo "$response" | python -c "import sys,json; print(json.load(sys.stdin).get('response',''))"
+}
 
-### A. Gemini'ye sorunu yaz
-
-Gemini chat'ine şu formatta yaz:
-```
-[SORUN]
-Hedef: <ne yapılmak isteniyor>
-Ortam: Windows 11, Python
-Hata: <hata mesajı - tam metin>
-Denenen: <1. denemede ne oldu>, <2. denemede ne oldu>
-Bana Python kodu ver, açıklama ekleme.
-```
-
-Gönderme kodu (Playwright CDP):
-```python
-/c/Users/eymen/anaconda3/python.exe -c "
-import asyncio
-from playwright.async_api import async_playwright
-
-async def send(msg):
-    async with async_playwright() as p:
-        browser = await p.chromium.connect_over_cdp('http://localhost:9222')
-        ctx = browser.contexts[0]
-        page = next((p for p in ctx.pages if 'gemini' in p.url), None)
-        if not page: return
-        await page.wait_for_timeout(2000)
-        sel = 'div[contenteditable=\"true\"]'
-        await page.wait_for_selector(sel, timeout=10000)
-        await page.click(sel)
-        await page.fill(sel, '')
-        await page.type(sel, msg, delay=15)
-        await page.keyboard.press('Enter')
-        print('✅ Gönderildi')
-
-asyncio.run(send('MESAJ'))
-"
-```
-
-### B. Gemini'nin cevabını oku (10-12sn bekle)
-
-```python
-/c/Users/eymen/anaconda3/python.exe -c "
-import asyncio
-from playwright.async_api import async_playwright
-
-async def read():
-    async with async_playwright() as p:
-        browser = await p.chromium.connect_over_cdp('http://localhost:9222')
-        ctx = browser.contexts[0]
-        page = next((p for p in ctx.pages if 'gemini' in p.url), None)
-        if not page: return
-        await page.wait_for_timeout(12000)
-        blocks = await page.evaluate('''
-            () => {
-                const b = document.querySelectorAll('pre code, div.code-block, pre');
-                return Array.from(b).map(x => x.textContent.trim()).filter(t => t.length > 50);
-            }
-        ''')
-        if blocks:
-            print(f'{len(blocks)} kod blogu')
-            for i, code in enumerate(blocks[-3:]):
-                print(f'--- KOD {i+1} ---')
-                print(code[:4000])
-        else:
-            txt = await page.evaluate('() => document.body.innerText')
-            print(txt[:2000])
-
-asyncio.run(read())
-"
-```
-
-**NOT:** Bu script zaten `scripts/read_gemini_code.py` olarak kayıtlı:
-```bash
-/c/Users/eymen/anaconda3/python.exe /c/Users/eymen/AppData/Local/hermes/skills/software-development/hermes-gemini-copilot/scripts/read_gemini_code.py 12
-```
-
-### C. Kodu VS Code'da yeni proje olarak hazırla (KRİTİK)
-
-> **Bu adım atlanamaz.** Kullanıcı kodun çalıştığını **kendi VS Code'unda** görmek ister.
-
-1. **VS Code process kontrolü:**
-   ```bash
-   ps aux | grep -i code | grep -v grep | wc -l
-   ```
-   - 0 ise → `code C:\Users\eymen\Desktop\<yeni-proje-adi>` ile yeni aç
-   - 1+ ise → mevcut VS Code'u kullan, **yeniden açma**
-
-2. **Yeni proje klasörü oluştur:**
-   ```bash
-   mkdir -p /c/Users/eymen/Desktop/<yeni-proje-adi>
-   ```
-   Her seferinde farklı isim (örn. `ag-tarama`, `network-scan-v2`)
-
-3. **Kodu write_file ile yaz:**
-
-4. **Kullanıcıya adım adım talimat ver:**
-   - ▶ **Run butonu** (sağ üst, yeşil oynatma) veya `Ctrl+F5`
-   - Alternatif: sağ tık → **Run Python File in Terminal**
-   - Alternatif: sol tıkla dosyayı seç, üst menüden Run → Run Without Debugging
-
-5. **Çıktıyı VS Code terminalinde görmesini bekle**
-
-6. **Çıktıyı oku** (ben terminal command ile çalıştırırım) → Gemini'ye geribildirim
-
-**YANLIŞ (bu oturumda yapılan hata):**
-- Kodu yazıp ben terminalde çalıştırdım, çıktıyı kullanıcı görmedi
-- VS Code'u her adımda kapatıp açtım
-- Terminal komutu yazdırdım, ▶ Run kullanmadım
-
-**DOĞRU:**
-- Kodu VS Code projesine yaz
-- Kullanıcıya ▶ Run yapmasını söyle
-- Bekle, çıktıyı VS Code terminalinde görsün
-- Sonra ben çıktıyı alıp Gemini'ye gönder
-
-### D. Çıktıyı oku + Gemini'ye geribildirim
-
-Kullanıcı çıktıyı gördükten sonra, ben de terminal'den çalıştırıp çıktıyı alırım:
-```bash
-cd /c/Users/eymen/Desktop/<proje-adi>
-/c/Users/eymen/anaconda3/python.exe main.py 2>&1
-```
-
-Bu çıktıyı Gemini'ye gönder:
-```
-VERDİĞİN KOD ŞU ÇIKTIYI VERDİ:
-<çıktının tamamı>
-
-Düzeltilmiş kodu ver, sadece kod.
-```
-
-Sonra B'ye dön, yeni kodu oku.
-
-## Chrome'u CDP modunda başlatma (kapalıysa)
-
-```bash
-# 1. Öldür
-taskkill //F //IM chrome.exe 2>/dev/null; sleep 3
-
-# 2. Background'da başlat (yeni profil, varsayılanı bozmaz)
-terminal(background=true) komutuyla:
-"/c/Users/eymen/scoop/apps/googlechrome/148.0.7778.97/chrome.exe" --remote-debugging-port=9222 --user-data-dir="C:/Users/eymen/AppData/Local/Google/Chrome/CDPProfile" "https://gemini.google.com/app"
-
-# 3. CDP'nin açılmasını bekle
-for i in 1..10; do
-  curl -s http://localhost:9222/json/version | python -c "import sys,json; print(json.load(sys.stdin).get('Browser',''))"
-  if [ -n "$result" ]; then break; fi
-  sleep 3
+for konu in "${KONULAR[@]}"; do
+  # 1. Hermes açılış → qwen_sor()
+  # 2. Hermes derinleştirme → qwen_sor()
+  # 3. Skill kaydet (SKILL.md + references/diyalog.txt)
+  # 4. İlerleme: #X/29 (%Y)
+  sleep 15  # MAX 15sn bekleme
 done
 ```
 
-## Bilinen tuzaklar
+### Skill Çıktı Yapısı
 
-1. **PATH karışıklığı:** `python` komutu Hermes venv'ini gösterir, orada playwright YOK. Her zaman **tam yol** kullan: `/c/Users/eymen/anaconda3/python.exe`
+```
+~/.hermes/skills/security/<skill-adi>/
+├── SKILL.md                       → Özet, metadata, uyarı
+└── references/
+    ├── diyalog.txt                → Hermes + Qwen tam karşılıklı konuşma
+    └── qwen_yanit.txt             → Tek taraflı Qwen yanıtı (internet konulu)
+```
 
-2. **type() timeout:** Gemini'nin React input'u sadece Playwright `fill()` + `type()` ile çalışır. `delay=15-20` kullan, daha yüksek yavaş kalır.
+### Sabah Raporu (08:10 Telegram)
 
-3. **Chrome intro sayfası:** Chrome `--remote-debugging-port` ile açılınca bazen `chrome://intro/` sayfasında kalır. Gemini açılmazsa CDP WebSocket ile `Page.navigate` yap:
-   ```python
-   import asyncio, json, websockets, requests
-   tabs = requests.get("http://localhost:9222/json").json()
-   intro = [t for t in tabs if 'intro' in t["url"]][0]
-   ws_url = intro["webSocketDebuggerUrl"]
-   async with websockets.connect(ws_url) as ws:
-       cmd = json.dumps({"id":1,"method":"Page.navigate","params":{"url":"https://gemini.google.com/app"}})
-       await ws.send(cmd)
-       await ws.recv()
-   ```
+Cronjob `qwen-diyalog-sabah-raporu` — `.qwen_report_v2` veya `.qwen_report.final` okuyup Telegram formatında gönderir.
 
-4. **Timeout:** Tarama gibi uzun işlemlerde timeout değerini 120sn yap. Yetmezse background'da çalıştır.
+### Bilinen Tuzaklar (14 Mayıs 2026)
 
-5. **Birden çok kod bloğu:** Gemini bazen aynı kodu 3 kere yazar. Son bloğu al, birinciyle aynıysa fark etmez.
+| Hata | Belirti | Çözüm |
+|------|---------|-------|
+| Lock kilitli | "Başka oturum çalışıyor" | `rm -f $LOCK` önceden temizle |
+| Sed pipe hatası | `unknown option to s` | `grep -v + mv` kullan |
+| grep boş integer | `integer expression expected` | `${VAR:-0}` varsayılan |
+| mkdir eksik | `No such file or directory` | `mkdir -p path/references` |
+| Saat string karşılaştırma | 23'te yanlış durur | `$((10#$h))` integer çevrimi |
+| PTY yarıda kesilme | `[Command interrupted]` | REST API kullan, `ollama run` kullanma |
+| Python False/false | `NameError: name 'false'` | JSON'da `'stream':False` büyük F |
+| Ollama Stopping deadlock | Model yanıt vermez | `taskkill //F //IM ollama.exe` + `ollama serve` |
 
-6. **VS Code'u tekrar tekrar açma:** Her adımda `code .` ile yeni pencere açma. Önce process var mı kontrol et (`ps aux | grep code`).
+---
 
-## Başarıyla test edilen senaryolar
+## D. İnternetten Konu Bul + Ollama'ya Sor (14 Mayıs 2026)
 
-Ayrıntılar: `skill_view('hermes-gemini-copilot', 'references/chrome-cdp-profile.md')` — Chrome CDP profil yönetimi ve intro sayfası navigasyonu.
+**Amaç:** Önceden yazılmış konu havuzu tükenince web_search ile yeni konu bulup qwen'e sormak.
 
-### 13 May 2026 — WiFi ağ taraması (full loop testi ✅)
-- **Hedef:** WiFi'daki cihazların IP + MAC adreslerini bul
-- **1. deneme:** SendARP ile tarama → sadece 1 cihaz buldu (192.168.37.x subnet'teydi)
-- **2. deneme:** Aynı kod geliştirilmiş hali → GERÇEK ağ (192.168.0.x) bulundu, 6 cihaz ✅
-- **Sonuç:** Modem, bilgisayar, Hikvision kamera, 3 bilinmeyen cihaz
-- **Kod:** `/c/Users/eymen/Desktop/network-scan/scanner2.py`
+### Akış
 
-### Önceki test — WiFi tarama (5 cihaz)
-- Gemini'den ping+ARP+threading kodu, 5 cihaz tespit edildi
-- GitHub repo: https://github.com/asdafgf/hermes-gemini-copilot
+1. `web_search` ile güncel siber güvenlik konusu bul (limit=2)
+2. Konuyu `qwen_otonomegitim.sh` script'ine parametre olarak gönder
+3. Script qwen'e sorar + skill kaydeder
+4. Registry'de tekrar kontrolü yapılır
+5. Döngüyle devam — saat 08:00'e kadar
+
+### Kullanım
+
+```bash
+bash ~/.hermes/scripts/qwen_otonomegitim.sh \
+  "Konu Başlığı" \
+  "WEB-XXX" \
+  "kategori" \
+  "Qwen'e sorulacak detaylı prompt (3-4 paragraf istendiğini belirt)"
+```
+
+### Örnek Başarılı Konular (14 Mayıs 2026)
+
+- Bettercap ile WiFi Ağ Keşfi ve Cihaz Tespiti (wifi)
+- scrcpy ile Android Ekran Yansıtma ve Uzaktan Kontrol (android)
+- ADB TCP/IP ile Android Uzaktan Erişim Güvenlik Riskleri (android)
+- WiFi Deauthentication Saldırıları ve WPA3 Koruması (wifi)
+- Android Telefon Konum Takibi: GPS, WiFi ve Hücresel Yöntemler (android)
+- BadUSB Rubber Ducky Flipper Zero Saldırıları (saldiri)
+- 2025-2026 Zero-Day Exploit Trendleri ve APT Grupları (ileri)
+
+---
+
+## E. Qwen Hatasında Gemini'ye Yönlendirme (14 Mayıs 2026)
+
+**Kural:** Qwen2.5-coder'da herhangi bir hata oluştuğunda direkt Gemini'ye sor. 3 deneme bekleme.
+
+### Tetikleyiciler
+
+- Timeout (120sn+)
+- API hatası (curl exit code 0 değil)
+- Python traceback
+- JSON parse hatası
+- Boş yanıt
+- Ollama "Stopping..." deadlock
+- Model yanıt vermiyor
+
+### Akış
+
+1. Hata tespit edilir edilmez → Chrome CDP üzerinden Gemini'ye sor
+2. "[SORUN] Ortam: Windows 11, Python. Hata: ... Bana Python kodu ver."
+3. `read_gemini_code.py` ile cevabı oku
+4. Kodu `write_file` ile yaz, `terminal` ile çalıştır
+5. Çıktıyı Gemini'ye geribildirim yap
+6. Çözüm bulunana kadar döngü
+
+### Örnek: ollama run PTY Sorunu
+
+```
+Sorun: ollama run qwen2.5-coder:7b PTY'siz çalışmıyor
+Gemini çözümü: curl -X POST http://localhost:11434/api/generate ile REST API kullan
+Sonuç: ✅ Çalışıyor (43 sn'de cevap)
+```
+
+---
+
+## Referans Dosyaları
+
+- `references/ollama-self-improvement-loop.md` — Ollama kendini geliştirme döngüsü
+- `references/qwen-diyalog-siber-guvenlik-29-konu.md` — 29 konulu havuz
+- `references/openrouter-api-setup.md` — OpenRouter API key kurulum ve çalışan/çalışmayan modeller
+- `scripts/read_gemini_code.py` — Gemini kod okuma script'i

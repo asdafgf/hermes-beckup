@@ -1,0 +1,27 @@
+# Video: Finans Otomasyonu — 3 Ajanlı PDF İşleme Sistemi
+URL: https://youtu.be/kFHNz-Zgl-c
+Dil: Türkçe
+
+00:00 Orta ölçekli şirkette ayda 20-40 saat alan işi 60 saniyeye indiren sistem
+00:20 Gerçek demo — chatbot değil, canlı çalışan AI sistemi
+00:30 Banka ekstresi, 3 kart, taksitli ödemeler, dolar işlemleri, mil kullanımları
+00:50 Finans ekibi manuel PDF okuma, kategorize etme, Excel raporu — hata açık
+01:22 AI sistemi: veritabanı, canlı dashboard, anomali tespiti, insan onay mekanizması
+01:37 Lovable ile kurulum
+02:03 3 Ajan:
+  - Ajan 1: Belge okuyucu/sınıflandırıcı (kredi kartı mı, fatura mı)
+  - Ajan 2: Extractor — tüm transactionları çıkarır
+  - Ajan 3: Validator — anormal harcamaları tespit eder
+02:43 Dashboard: aylık harcamalar, kategoriler, anomali onay/red
+03:14 Çıktı: Excel/CSV, aylık rapor
+03:48 Birden çok fatura eklenebilir
+03:55 İş akışı: Chatbot'ta tartış/planla → Lovable prompt'u → Lovable'da build
+04:51 Domain bağlama, web uygulaması olarak yayınlama
+05:42 3 Katman Mimarisi:
+  - Katman 1: Supabase Edge Function (orkestratör, PDF tetikleyici)
+  - Katman 2: Cloud API ile 3 AI ajan
+  - Katman 3: Supabase DB + Lovable dashboard
+06:44 Teknik detaylar: Chunked Base64 PDF dönüşümü, JSON parse fallback, error handling
+07:46 İş etkisi: Zaman (20-40 saat → 60sn), Doğruluk, Anomali tespiti, Benimseme
+08:36 Gelecek: PDF otomasyon (Gmail/Drive), LangGraph orkestrasyon, ERP entegrasyonu, Slack/email bildirimleri
+09:30 Vurgu: AI chatbot değil, gerçek iş süreçlerine entegre sistem

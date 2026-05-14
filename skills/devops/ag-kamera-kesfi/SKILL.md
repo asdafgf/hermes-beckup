@@ -148,6 +148,8 @@ curl -s http://IP/onvif/device_service -X POST \
 - Generic/XCLYCM tipi kameralarda HTTP web arayüzü 404 dönebilir, bu normaldir — ONVIF ve RTSP portlarına odaklan
 - Boş şifre (`admin:@`) genelde çalışmaz çünkü kullanıcı kurulumda şifre belirlemiştir, reset gerekebilir
 - HTTP snapshot endpoint'leri 401 döndüyse auth gerektiriyordur — RTSP de auth gerektirecek demektir, doğrudan reset düşün
+- **Hikvision Firmware 5.x+ kritik tuzak:** Tüm HTTP endpoint'leri 404 döner, varsayılan şifrelerin hiçbiri çalışmaz, ONVIF auth zorunludur, CVE'ler (2017-7921, 2021-36260) 405 Method Not Allowed döner. Bu bir güvenlik özelliğidir — kamera kilitlidir. Brute-force zaman kaybıdır. Çözüm: fiziksel reset, SADP tool veya Hik-Connect uygulaması. Detaylı rehber: `references/hikvision-firmware5-bypass.md`
+- SADP tool kurulumu: ZIP indir → çıkar → Sağ tık Yönetici olarak çalıştır → Npcap kurulumunu onayla. Doğrudan terminal'den `.exe` çalıştırmak sessiz kurulum gerektirir (`/VERYSILENT`) ve genelde başarısız olur — elle kurmak daha güvenilir.
 
 ### Web Arayüzü 404 Dönen Kameralar İçin HTTP Endpoint Tarama
 Kamera web arayüzü 404 dönüyorsa şu endpoint'leri dene:
@@ -200,6 +202,9 @@ curl -s -u "admin:sifre" "http://IP/onvif/media_service" -X POST \
 - Servis durumu (çalışıyor mu, port açık mı, Chrome açık mı) gibi şeyleri sorma — direkt kontrol et
 - Sadece karar gerektiren durumlarda sor (reset atalım mı, Chrome açalım mı)
 - "Bana sorma bu bir kazanım" tarzı bir uyarı aldığında, hemen skill'e ekle ve bir daha aynı şeyi sorma
+
+## Referans Dosyaları
+- `references/telefon-osint-notlari.md` — Telefon numarasından OSINT, veri sızıntısı kontrolleri, yasal araçlar
 
 ## Google Arama ile Şifre Bulma Stratejisi
 Kamera markası biliniyor ama şifre bulunamıyorsa:

@@ -1,0 +1,38 @@
+---
+name: consentfix
+description: "John Hammond videosundan çıkarılan siber güvenlik tekniği. Konu: Consentfix"
+version: 1.0
+author: hermes
+category: security
+source: "https://youtu.be/AAiiIY-Soak"
+tags: [siber-guvenlik, john-hammond, video-notu, john-hammond]
+---
+
+# Consentfix
+
+**Kaynak:** [AAiiIY-Soak](https://youtu.be/AAiiIY-Soak) | **Kanal:** john-hammond
+
+---
+
+## 🎯 Öğrenilen Konu
+
+Bu skill, john-hammond kanalındaki bir videodan çıkarılan bilgileri içerir.
+
+---
+
+## 📝 Transcript Özeti
+
+Consentfix. Consentfix. Consentfix. Analyzing a browser native ClickFix Analyzing a browser native ClickFix Analyzing a browser native ClickFix style attack that hijacks OOTH consent style attack that hijacks OOTH consent style attack that hijacks OOTH consent grants. Listen, I feel like I had to grants. Listen, I feel like I had to grants. Listen, I feel like I had to make this video. I wanted to cover this make this video. I wanted to cover this make this video. I wanted to cover this cuz this is so cool. I got to be honest, cuz this is so cool. I got to be honest, cuz this is so cool. I got to be honest, I was nerd sniped when I first read this I was nerd sniped when I first read this I was nerd sniped when I first read this and I wanted to play with it and I and I wanted to play with it and I and I wanted to play with it and I wanted to show it to you. So, there's a wanted to show it to you. So, there's a wanted to show it to you. So, there's a lot of cool stuff I want to dive into in lot of cool stuff I want to dive into in lot of cool stuff I want to dive into in this video. So, I think the way that this video. So, I think the way that this video. So, I think the way that we'll structure it is first I want to we'll structure it is first I want to we'll structure it is first I want to walk through the article so you get that walk through the article so you get that walk through the article so you get that background context. Second, I'll show background context. Second, I'll show background context. Second, I'll show off a little cool little oh teeny weeny off a little cool little oh teeny weeny off a little cool little oh teeny weeny video demonstration. And then third, I'm video demonstration. And then third, I'm video demonstration. And then third, I'm just kind of going to talk going to just kind of going to talk going to just kind of going to talk going to pontificate, speculate, think, and pontificate, speculate, think, and pontificate, speculate, think, 
+
+---
+
+## 📌 Anahtar Noktalar
+
+1. Video: AAiiIY-Soak
+2. Kanal: john-hammond
+3. Süre: Transcript baz alınarak
+
+---
+
+## 🔗 İlgili Skill'ler
+- john-hammond-siber-guvenlik-arsivi

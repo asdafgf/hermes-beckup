@@ -501,6 +501,68 @@ for g in json.load(sys.stdin):
     print(f\"  {g['id']}  {g['description'] or '(no desc)':40}  {files}\")"
 ```
 
+## 11. Push Protection & Secret Scanning
+
+GitHub's push protection blocks commits containing secrets (API keys, tokens, etc.) BEFORE they reach the remote. When blocked:
+
+```
+remote: - Push cannot contain secrets
+remote:       —— OpenRouter API Key ————————————————————————————————
+remote:        locations:
+remote:          - commit: abc123
+remote:            path: .hermes_history:404
+```
+
+### Fix: Remove the secret from the commit
+
+**If the secret is in the most recent commit (not yet pushed):**
+
+```bash
+# 1. Scrub the secret from the file on disk
+sed -i 's/sk-or-v1-[a-z0-9]*/[REDACTED]/g' .hermes_history
+
+# 2. If the file should never be tracked, add to .gitignore
+echo ".hermes_history" >> .gitignore
+echo "memories/MEMORY.md" >> .gitignore
+echo "state-snapshots/" >> .gitignore
+
+# 3. Remove from staging (if it shouldn't be tracked)
+git rm --cached .hermes_history memories/MEMORY.md
+git rm --cached -r state-snapshots/
+
+# 4. Re-stage, amend the commit, force push
+git add -A
+git commit --amend -m "same message as before"
+git push origin main --force
+```
+
+**If the secret is in older commits:** Use `git filter-branch` or `git filter-repo` to rewrite history. Simpler for private backup repos: use the GitHub secret scanning bypass link provided in the error.
+
+### Prevent future leaks: .gitignore rules for agent config dirs
+
+When backing up `~/.hermes/` or similar agent config directories, these files commonly contain secrets and should be gitignored:
+
+```
+# API key risk — history files store user input with keys
+.hermes_history
+memories/MEMORY.md
+memories/USER.md
+
+# State snapshots — contain full .env and config.yaml copies
+state-snapshots/
+
+# Environment files
+.env
+.env.*
+```
+
+### Force push considerations
+
+- Use `--force` (or `--force-with-lease`) to override remote after amending
+- Safe for private backup repos with single user
+- For shared repos, prefer `--force-with-lease` to prevent overwriting others' work
+- After force-pushing an amended commit, all local clones need `git pull --rebase` or a fresh clone
+
 ## Quick Reference Table
 
 | Action | gh | git + curl |

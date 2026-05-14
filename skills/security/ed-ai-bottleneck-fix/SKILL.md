@@ -1,7 +1,11 @@
 ---
 name: ed-ai-bottleneck-fix
 description: "AI asistan darboğaz çözümü: asenkron çalıştırma, timeout yapılandırması, bağlam sınırlandırması. Kullanıcı Eymen'in talebi üzerine, tüm işlemlerde uygulanması zorunlu kurallar."
+metadata:
+  priority: mandatory
+  applies_to: all-operations
 ---
+
 # ED AI Bottleneck Fix — Darboğaz Çözümü
 
 ## Zorunlu Kurallar (Her İşlem Öncesi Uygulanır)
@@ -26,7 +30,11 @@ Sunucu başlatan, log dinleyen veya kendi kendine kapanmayan bir terminal komutu
   - Son: son 20 satır
   - Ortası: `... [X satır atlandı] ...`
 - `terminal()` çıktısı > 50 satırsa truncation uygula
-- Model context şişmesini engellemek için gereksiz logları session'a taşıma
+
+### Kural 4 — Qwen REST API Kullan (14 Mayıs 2026)
+- `ollama run` ASLA kullanma — PTY gerektirir
+- `curl -s --max-time 120 -X POST http://localhost:11434/api/generate` kullan
+- Ollama "Stopping..." deadlock: `taskkill //F //IM ollama.exe` + `ollama serve`
 
 ## Uygulama Kontrol Listesi
 
@@ -34,11 +42,13 @@ Sunucu başlatan, log dinleyen veya kendi kendine kapanmayan bir terminal komutu
 - [ ] Komut >5sn sürecek → timeout değerlendir
 - [ ] Çıktı >50 satır → truncation uygula
 - [ ] Interaktif komut → background + pty veya başka yöntem
+- [ ] Ollama sorgusu → `ollama run` değil, REST API kullan
 
 ## Neden Bu Kural Var?
 Eymen'in sisteminde AI ajanı terminalde takılıp kalıyordu:
 1. Sunucu foreground'da başlatılıp asılı kalıyor
 2. Uzun loglar model context'ini doldurup zehirliyor
 3. Timeout olmayan komutlar ajanı bloke ediyor
+4. `ollama run` PTY'siz çalışmıyor (Windows) → REST API çözümü
 
 Bu skill her işlem **öncesi** kontrol edilmelidir.

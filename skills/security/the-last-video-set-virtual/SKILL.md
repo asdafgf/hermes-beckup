@@ -1,0 +1,26 @@
+---
+name: the-last-video-set-virtual
+description: "in the last video we set up virtual KD in the last video we set up virtual KD in"
+version: 1.0
+category: security
+source: "https://youtu.be/m1jgykKxtPk"
+tags: [exploit, windows, john-hammond]
+---
+
+# in the last video we set up virtual KD in the last video we set up virtual KD in
+
+**Kaynak:** [YouTube](https://youtu.be/m1jgykKxtPk) | **Kanal:** john-hammond
+
+---
+
+## 📝 Transcript Özeti
+
+in the last video we set up virtual KD in the last video we set up virtual KD in the last video we set up virtual KD with wind debug preview with a virtual with wind debug preview with a virtual with wind debug preview with a virtual machine set up with Windows 7. I know machine set up with Windows 7. I know machine set up with Windows 7. I know it's pretty old school but that gives us it's pretty old school but that gives us it's pretty old school but that gives us a little bit of Runway to learn new a little bit of Runway to learn new a little bit of Runway to learn new stuff with kernel exploitation and in stuff with kernel exploitation and in stuff with kernel exploitation and in this video we need to actually set up this video we need to actually set up this video we need to actually set up our own vulnerable kernel driver and our own vulnerable kernel driver and our own vulnerable kernel driver and that is going to be the haxis extreme that is going to be the haxis extreme that is going to be the haxis extreme vulnerable driver or hevd if you haven't vulnerable driver or hevd if you haven't vulnerable driver or hevd if you haven't checked out the last video I mentioned checked out the last video I mentioned checked out the last video I mentioned that this is very similar to that this is very similar to that this is very similar to volinserver.exe if you're familiar with volinserver.exe if you're familiar with volinserver.exe if you're familiar with that as sort of a user land application that as sort of a user land application that as sort of a user land application where you can exploit it because it's where you can exploit it because it's where you can exploit it because it's intentionally vulnerable it has software intentionally vulnerable it has software intentionally vulnerable it has software flaws and bugs that you can use to learn flaws and bugs that you can use to learn flaws and bugs that you can use to learn some binder exploitation techniques hevd 
+
+---
+
+## 🔑 Anahtar Kelimeler
+exploit, windows
+
+---
+

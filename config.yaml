@@ -2,6 +2,9 @@ model: deepseek-chat
 providers:
   deepseek:
     api_key: sk-c06d49b4000c47f49fc6ac44f1ce57bd
+  ollama:
+    base_url: http://localhost:11434/v1
+    api_key: ollama
 fallback_providers: []
 credential_pool_strategies: {}
 toolsets:
@@ -151,73 +154,73 @@ bedrock:
     trace: disabled
 auxiliary:
   vision:
-    provider: auto
-    model: ''
+    provider: google
+    model: gemini/gemini-2.0-flash
     base_url: ''
     api_key: ''
     timeout: 120
     extra_body: {}
     download_timeout: 30
   web_extract:
-    provider: auto
-    model: ''
+    provider: google
+    model: gemini/gemini-2.0-flash
     base_url: ''
     api_key: ''
     timeout: 360
     extra_body: {}
   compression:
-    provider: auto
-    model: ''
+    provider: google
+    model: gemini/gemini-2.0-flash
     base_url: ''
     api_key: ''
     timeout: 120
     extra_body: {}
   session_search:
-    provider: auto
-    model: ''
+    provider: google
+    model: gemini/gemini-2.0-flash
     base_url: ''
     api_key: ''
     timeout: 30
     extra_body: {}
     max_concurrency: 3
   skills_hub:
-    provider: auto
-    model: ''
+    provider: google
+    model: gemini/gemini-2.0-flash
     base_url: ''
     api_key: ''
     timeout: 30
     extra_body: {}
   approval:
-    provider: auto
-    model: ''
+    provider: google
+    model: gemini/gemini-2.0-flash
     base_url: ''
     api_key: ''
     timeout: 30
     extra_body: {}
   mcp:
-    provider: auto
-    model: ''
+    provider: google
+    model: gemini/gemini-2.0-flash
     base_url: ''
     api_key: ''
     timeout: 30
     extra_body: {}
   title_generation:
-    provider: auto
-    model: ''
+    provider: google
+    model: gemini/gemini-2.0-flash
     base_url: ''
     api_key: ''
     timeout: 30
     extra_body: {}
   triage_specifier:
-    provider: auto
-    model: ''
+    provider: google
+    model: gemini/gemini-2.0-flash
     base_url: ''
     api_key: ''
     timeout: 120
     extra_body: {}
   curator:
-    provider: auto
-    model: ''
+    provider: google
+    model: gemini/gemini-2.0-flash
     base_url: ''
     api_key: ''
     timeout: 600
@@ -289,7 +292,7 @@ tts:
     voice: en_US-lessac-medium
 stt:
   enabled: true
-  provider: local
+  provider: groq
   local:
     model: base
     language: ''
@@ -313,14 +316,14 @@ context:
 memory:
   memory_enabled: true
   user_profile_enabled: true
-  memory_char_limit: 2200
-  user_char_limit: 1375
+  memory_char_limit: 10000
+  user_char_limit: 5000
   provider: ''
   nudge_interval: 10
   flush_min_turns: 6
 delegation:
-  model: ''
-  provider: ''
+  model: gemini/gemini-2.0-flash
+  provider: google
   base_url: ''
   api_key: ''
   inherit_mcp_toolsets: true
@@ -386,12 +389,11 @@ approvals:
   cron_mode: deny
   mcp_reload_confirm: false
   destructive_slash_confirm: false
-
 mcp_servers:
   chrome:
-    command: "node"
+    command: node
     args:
-      - "C:\\Users\\eymen\\AppData\\Roaming\\npm\\node_modules\\mcp-chrome-bridge\\dist\\mcp\\mcp-server-stdio.js"
+    - C:\Users\eymen\AppData\Roaming\npm\node_modules\mcp-chrome-bridge\dist\mcp\mcp-server-stdio.js
     timeout: 120
     connect_timeout: 60
 command_allowlist: []

@@ -1,0 +1,43 @@
+---
+name: trojan
+description: "John Hammond videosundan çıkarılan: have you ever seen something on your have you ever seen something on your have you ever seen somethi"
+version: 1.0
+author: hermes
+category: security
+source: "https://youtu.be/bOCe1N78QDo"
+tags: [trojan, john-hammond, video-notu]
+---
+
+# have you ever seen something on your have you ever seen something on your have you ever seen somethi
+
+**Kaynak:** [YouTube](https://youtu.be/bOCe1N78QDo) | **Kanal:** john-hammond
+**Kategori:** malware-analysis
+
+---
+
+## 🎯 Konu
+
+Bu videoda şu konu anlatılıyor: trojan
+
+---
+
+## 📝 Transcript Özeti
+
+have you ever seen something on your have you ever seen something on your have you ever seen something on your computer that looks like this Microsoft computer that looks like this Microsoft computer that looks like this Microsoft security alert your window is blocked security alert your window is blocked security alert your window is blocked because your computer is infected with because your computer is infected with because your computer is infected with Trojan viruses or even worse sound Trojan viruses or even worse sound Trojan viruses or even worse sound warning here for my headphone friends warning here for my headphone friends warning here for my headphone friends sounds something like this important sounds something like this important sounds something like this important security message your computer has been security message your computer has been security message your computer has been locked up this is a fake and scam popup locked up this is a fake and scam popup locked up this is a fake and scam popup that tries to look like real and that tries to look like real and that tries to look like real and legitimate computer popup dialogue boxes legitimate computer popup dialogue boxes legitimate computer popup dialogue boxes but it's all to get you to call this but it's all to get you to call this but it's all to get you to call this number and fall for a scam these popups number and fall for a scam these popups number and fall for a scam these popups appear on malicious websites that you appear on malicious websites that you appear on malicious websites that you might accidentally find yourself at might accidentally find yourself at might accidentally find yourself at while using your web browser it while using your web browser it while using your web browser it automatically full screens the window so automatically full screens the window so automatically full screens the window so you can no longer see your address bar you can no longer see your address 
+
+---
+
+## 🔑 Anahtar Kelimeler
+trojan
+
+---
+
+## 📌 Nasıl Kullanılır
+1. Videoyu izle: https://youtu.be/bOCe1N78QDo
+2. Yukarıdaki transcript özetini oku
+3. Konuyu pratikte dene (güvenli ortamda)
+
+---
+
+## 🔗 İlgili Skill'ler
+- john-hammond-siber-guvenlik-arsivi

@@ -1,0 +1,271 @@
+{
+  "current_index": 22,
+  "total_sources": 100,
+  "kanallar": [
+    "ArjanCodes",
+    "mCoding",
+    "Corey Schafer",
+    "Real Python",
+    "Anthony Sottile",
+    "PyData",
+    "Sentdex",
+    "Patrick Loeber",
+    "Jack of Some Trades",
+    "James Powell",
+    "CodingWithMitch",
+    "The Renegade Coder",
+    "Sebastian Witowski",
+    "Amigoscode",
+    "Programming with Mosh",
+    "Traversy Media",
+    "Derek Banas",
+    "Continuous Delivery",
+    "CodeOpinion",
+    "Hussein Nasser",
+    "John Hammond",
+    "LiveOverflow",
+    "IppSec",
+    "HackerSploit",
+    "David Bombal",
+    "NetworkChuck",
+    "Null Byte",
+    "The Cyber Mentor",
+    "ST\u00d6K",
+    "PwnFunction",
+    "Computerphile",
+    "SANS Institute",
+    "DEF CON",
+    "Black Hat",
+    "Guided Hacking",
+    "Seytonic",
+    "Hak5",
+    "The XSS Rat",
+    "NahamSec",
+    "Cyber Detective",
+    "Social Engineering",
+    "Offensive Security",
+    "TrustedSec",
+    "Black Hills Information Security",
+    "MalwareTech",
+    "Andrej Karpathy",
+    "Matthew Berman",
+    "Prompt Engineering",
+    "Sam Witteveen",
+    "Mervin Praison",
+    "AI Jason",
+    "DeepLearning.AI",
+    "1littlecoder",
+    "Two Minute Papers",
+    "Greg Kamradt",
+    "IndyDevDan",
+    "DataIndependent",
+    "Prompting Insider",
+    "Dave Ebbelaar",
+    "AIAgentic",
+    "Weights & Biases",
+    "Papers with Code",
+    "Yannic Kilcher",
+    "The AI Advantage",
+    "Jeff Heaton",
+    "OSINT Curious",
+    "IntelTechniques",
+    "BendoBrown",
+    "Benjamin Strick",
+    "The OSINTion",
+    "Sinwindie",
+    "Kase Scenarios",
+    "Searchlight OSINT",
+    "Hunchly",
+    "Maltego",
+    "Nixintel",
+    "Sector035",
+    "Technisette",
+    "MW-OSINT",
+    "CyberVox",
+    "TechWorld with Nana",
+    "The Cloudcast",
+    "Linux Foundation",
+    "Learn to Cloud",
+    "Bret Fisher Docker and DevOps",
+    "Jeff Geerling",
+    "Techno Tim",
+    "CloudSkills.io",
+    "Sysadmin Girl",
+    "Christian Lempa",
+    "TutoriaLinux",
+    "DevOps Toolkit",
+    "HashiCorp",
+    "DigitalOcean",
+    "Fireship",
+    "Beyond Fireship",
+    "Low Level JavaScript",
+    "ExplainingComputers",
+    "The Engineering Mindset",
+    "Veritasium"
+  ],
+  "islenen": [
+    {
+      "kanal": "ArjanCodes",
+      "video": "GmlZBdKhl9Y",
+      "skill": "arjancodes-dry-antipattern",
+      "kategori": "python",
+      "baslik": "DRY Often Makes Your Code Worse"
+    },
+    {
+      "kanal": "mCoding",
+      "video": "N56Jrqc7SBk",
+      "skill": "mcoding-generator-resource-cleanup",
+      "kategori": "python",
+      "baslik": "Generators and Async Generators - Resource Cleanup"
+    },
+    {
+      "kanal": "Corey Schafer",
+      "video": "eqjngvKfabg",
+      "skill": "corey-schafer-fastapi-docker-cloudrun",
+      "kategori": "python",
+      "baslik": "Deploy FastAPI to Cloud Run with Docker"
+    },
+    {
+      "kanal": "Anthony Sottile",
+      "video": "DxBVyuG24ug",
+      "skill": "anthony-sottile-markdown-git-tricks",
+      "kategori": "python",
+      "baslik": "Markdown Git Tricks"
+    },
+    {
+      "kanal": "PyData",
+      "video": "poEUYuf83oY",
+      "skill": "pydata-language-models-cogsci",
+      "kategori": "python",
+      "baslik": "Language Models and Cognitive Science"
+    },
+    {
+      "kanal": "Patrick Loeber",
+      "video": "qfWpPEgea2A",
+      "skill": "patrick-loeber-gemini-python-sdk",
+      "kategori": "python",
+      "baslik": "Gemini Python SDK Tutorial"
+    },
+    {
+      "kanal": "Jack of Some Trades",
+      "video": "transcript-kapali",
+      "skill": "skip-transcript-kapali",
+      "kategori": "python",
+      "baslik": "Transcript kapali - atlandi"
+    },
+    {
+      "kanal": "James Powell",
+      "video": "skip-kanal-bulunamadi",
+      "skill": "skip-kanal-yok",
+      "kategori": "python",
+      "baslik": "Kanal bulunamadi - atlandi (asil kanal mCoding zaten islendi)"
+    },
+    {
+      "kanal": "CodingWithMitch",
+      "video": "PwXcE4v75p4",
+      "skill": "coding-with-mitch-software-career",
+      "kategori": "python",
+      "baslik": "Software Career Insights"
+    },
+    {
+      "kanal": "The Renegade Coder",
+      "video": "batch-sonra",
+      "skill": "pending",
+      "kategori": "python",
+      "baslik": "Beklemede"
+    },
+    {
+      "kanal": "Sebastian Witowski",
+      "video": "batch-sonra",
+      "skill": "pending",
+      "kategori": "python",
+      "baslik": "Beklemede"
+    },
+    {
+      "kanal": "Amigoscode",
+      "video": "batch-sonra",
+      "skill": "pending",
+      "kategori": "python",
+      "baslik": "Beklemede"
+    },
+    {
+      "kanal": "Programming with Mosh",
+      "video": "batch-sonra",
+      "skill": "pending",
+      "kategori": "python",
+      "baslik": "Beklemede"
+    },
+    {
+      "kanal": "Traversy Media",
+      "video": "batch-sonra",
+      "skill": "pending",
+      "kategori": "python",
+      "baslik": "Beklemede"
+    },
+    {
+      "kanal": "Derek Banas",
+      "video": "batch-sonra",
+      "skill": "pending",
+      "kategori": "python",
+      "baslik": "Beklemede"
+    },
+    {
+      "kanal": "Continuous Delivery",
+      "video": "batch-sonra",
+      "skill": "pending",
+      "kategori": "python",
+      "baslik": "Beklemede"
+    },
+    {
+      "kanal": "CodeOpinion",
+      "video": "batch-sonra",
+      "skill": "pending",
+      "kategori": "python",
+      "baslik": "Beklemede"
+    },
+    {
+      "kanal": "Hussein Nasser",
+      "video": "batch-sonra",
+      "skill": "pending",
+      "kategori": "python",
+      "baslik": "Beklemede"
+    },
+    {
+      "kanal": "John Hammond",
+      "video": "p6ySQ94GZsA",
+      "skill": "john-hammond-irs-zoom-phish-malware",
+      "kategori": "security",
+      "baslik": "IRS/Zoom Phishing Malware"
+    },
+    {
+      "kanal": "LiveOverflow",
+      "video": "x4CUAuwoZVk",
+      "skill": "liveoverflow-firefox-pwn2own-zero-day",
+      "kategori": "security",
+      "baslik": "Firefox Pwn2Own Zero-Day"
+    }
+  ],
+  "baslama_zamani": "2026-05-14T11:45:00+03:00",
+  "kategori_sayaci": {
+    "python": {
+      "toplam": 20,
+      "islenen": 18
+    },
+    "security": {
+      "toplam": 25,
+      "islenen": 2
+    },
+    "ai": {
+      "toplam": 20,
+      "islenen": 0
+    },
+    "osint": {
+      "toplam": 15,
+      "islenen": 0
+    },
+    "devops": {
+      "toplam": 20,
+      "islenen": 0
+    }
+  }
+}

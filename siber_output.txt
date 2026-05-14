@@ -1,0 +1,440 @@
+=== SIBER GUVENLIK EGITIM DONGUSU BASLADI ===
+Model: gemma4:31b
+Kategori: guvenlik (tum skill'ler ollama-guvenlik-* olarak kaydedilecek)
+Cikti: C:\Users\eymen/ollama_loop_output.txt
+
+Mevcut guvenlik skill: 0
+
+=================================================================
+TUR 1
+KONU: Port Tarama ve Servis Tespiti (Nmap ile)
+=================================================================
+HATA (tur 1): timed out
+Traceback (most recent call last):
+  File "C:\Users\eymen\AppData\Local\hermes\siber_loop.py", line 257, in <module>
+    resp = talk(prompt)
+  File "C:\Users\eymen\AppData\Local\hermes\siber_loop.py", line 21, in talk
+    with urllib.request.urlopen(req, timeout=180) as resp:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 489, in open
+    response = self._open(req, data)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 506, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 466, in _call_chain
+    result = func(*args)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1348, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+TimeoutError: timed out
+=================================================================
+TUR 2
+KONU: Ag Zafiyet Taramasi (Nessus, OpenVAS)
+=================================================================
+HATA (tur 2): timed out
+Traceback (most recent call last):
+  File "C:\Users\eymen\AppData\Local\hermes\siber_loop.py", line 257, in <module>
+    resp = talk(prompt)
+  File "C:\Users\eymen\AppData\Local\hermes\siber_loop.py", line 21, in talk
+    with urllib.request.urlopen(req, timeout=180) as resp:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 489, in open
+    response = self._open(req, data)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 506, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 466, in _call_chain
+    result = func(*args)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1348, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+TimeoutError: timed out
+=================================================================
+TUR 3
+KONU: Web Uygulama Guvenligi - SQL Injection
+=================================================================
+HATA (tur 3): [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+Traceback (most recent call last):
+  File "C:\Users\eymen\AppData\Local\hermes\siber_loop.py", line 257, in <module>
+    resp = talk(prompt)
+  File "C:\Users\eymen\AppData\Local\hermes\siber_loop.py", line 21, in talk
+    with urllib.request.urlopen(req, timeout=180) as resp:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 489, in open
+    response = self._open(req, data)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 506, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 466, in _call_chain
+    result = func(*args)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1348, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+ConnectionResetError: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+=================================================================
+TUR 4
+KONU: Web Uygulama Guvenligi - XSS Saldirilari
+=================================================================
+HATA (tur 4): timed out
+Traceback (most recent call last):
+  File "C:\Users\eymen\AppData\Local\hermes\siber_loop.py", line 257, in <module>
+    resp = talk(prompt)
+  File "C:\Users\eymen\AppData\Local\hermes\siber_loop.py", line 21, in talk
+    with urllib.request.urlopen(req, timeout=180) as resp:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 489, in open
+    response = self._open(req, data)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 506, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 466, in _call_chain
+    result = func(*args)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1348, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+TimeoutError: timed out
+=================================================================
+TUR 5
+KONU: Web Uygulama Guvenligi - CSRF
+=================================================================
+HATA (tur 5): timed out
+Traceback (most recent call last):
+  File "C:\Users\eymen\AppData\Local\hermes\siber_loop.py", line 257, in <module>
+    resp = talk(prompt)
+  File "C:\Users\eymen\AppData\Local\hermes\siber_loop.py", line 21, in talk
+    with urllib.request.urlopen(req, timeout=180) as resp:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 489, in open
+    response = self._open(req, data)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 506, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 466, in _call_chain
+    result = func(*args)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1348, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+TimeoutError: timed out
+=================================================================
+TUR 6
+KONU: Web Uygulama Guvenligi - LFI/RFI
+=================================================================
+HATA (tur 6): [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+Traceback (most recent call last):
+  File "C:\Users\eymen\AppData\Local\hermes\siber_loop.py", line 257, in <module>
+    resp = talk(prompt)
+  File "C:\Users\eymen\AppData\Local\hermes\siber_loop.py", line 21, in talk
+    with urllib.request.urlopen(req, timeout=180) as resp:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 489, in open
+    response = self._open(req, data)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 506, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 466, in _call_chain
+    result = func(*args)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1348, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+ConnectionResetError: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+=================================================================
+TUR 7
+KONU: Web Uygulama Guvenligi - SSRF
+=================================================================
+HATA (tur 7): [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+Traceback (most recent call last):
+  File "C:\Users\eymen\AppData\Local\hermes\siber_loop.py", line 257, in <module>
+    resp = talk(prompt)
+  File "C:\Users\eymen\AppData\Local\hermes\siber_loop.py", line 21, in talk
+    with urllib.request.urlopen(req, timeout=180) as resp:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 489, in open
+    response = self._open(req, data)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 506, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 466, in _call_chain
+    result = func(*args)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1348, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+ConnectionResetError: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+=================================================================
+TUR 8
+KONU: Sifreler ve Kriptografi - Hash Kirma Teknikleri
+=================================================================
+HATA (tur 8): [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+Traceback (most recent call last):
+  File "C:\Users\eymen\AppData\Local\hermes\siber_loop.py", line 257, in <module>
+    resp = talk(prompt)
+  File "C:\Users\eymen\AppData\Local\hermes\siber_loop.py", line 21, in talk
+    with urllib.request.urlopen(req, timeout=180) as resp:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 489, in open
+    response = self._open(req, data)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 506, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 466, in _call_chain
+    result = func(*args)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1348, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+ConnectionResetError: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+=================================================================
+TUR 9
+KONU: Sifreler ve Kriptografi - Simetrik/Asimetrik Sifreleme
+=================================================================
+HATA (tur 9): [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+Traceback (most recent call last):
+  File "C:\Users\eymen\AppData\Local\hermes\siber_loop.py", line 257, in <module>
+    resp = talk(prompt)
+  File "C:\Users\eymen\AppData\Local\hermes\siber_loop.py", line 21, in talk
+    with urllib.request.urlopen(req, timeout=180) as resp:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 489, in open
+    response = self._open(req, data)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 506, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 466, in _call_chain
+    result = func(*args)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1348, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+ConnectionResetError: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+=================================================================
+TUR 10
+KONU: Sifreler ve Kriptografi - SSL/TLS ve Sertifikalar
+=================================================================
+HATA (tur 10): [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+Traceback (most recent call last):
+  File "C:\Users\eymen\AppData\Local\hermes\siber_loop.py", line 257, in <module>
+    resp = talk(prompt)
+  File "C:\Users\eymen\AppData\Local\hermes\siber_loop.py", line 21, in talk
+    with urllib.request.urlopen(req, timeout=180) as resp:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 489, in open
+    response = self._open(req, data)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 506, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 466, in _call_chain
+    result = func(*args)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1348, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+ConnectionResetError: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+=================================================================
+TUR 11
+KONU: Ag Guvenligi - Firewall Kurallari ve Bypass
+=================================================================
+HATA (tur 11): [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+Traceback (most recent call last):
+  File "C:\Users\eymen\AppData\Local\hermes\siber_loop.py", line 257, in <module>
+    resp = talk(prompt)
+  File "C:\Users\eymen\AppData\Local\hermes\siber_loop.py", line 21, in talk
+    with urllib.request.urlopen(req, timeout=180) as resp:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 489, in open
+    response = self._open(req, data)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 506, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 466, in _call_chain
+    result = func(*args)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1348, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+ConnectionResetError: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+=================================================================
+TUR 12
+KONU: Ag Guvenligi - IDS/IPS Atlatma Teknikleri
+=================================================================

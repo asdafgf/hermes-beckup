@@ -204,6 +204,16 @@ Her adımda kod güvenlik taraması yapıldı
 | 1 | 🔒 Security | Trail of Bits | N |
 | 2 | ... | ... | ... |
 
+### Hybrid Pip Package + Skill Import
+
+Bazı GitHub repoları (örn. `Watch_Youtube_Skill`) hem Python pip paketi (`setup.py`) hem de Claude Code skill'i (`.claude/skills/`) içerir. Bu durumda:
+
+1. Venv kur + `pip install -r requirements.txt && pip install -e .`
+2. Skill'leri ayrıca Hermes'e kopyala (`cp .claude/skills/<name>/SKILL.md ~/.hermes/skills/<cat>/<name>/`)
+3. CLI'ı `--help` ile test et
+
+→ Detaylı rehber: `skill_view('skill-import', 'references/hybrid-pip-skill-import-windows.md')`
+
 ### false-positive notes (if any)
 - <skill-name>: eval/exec patterns are educational references, safe
 ```
@@ -224,6 +234,14 @@ Her adımda kod güvenlik taraması yapıldı
 
 7. **GitHub repo not found.** Not all orgs have a `skills` repo. Stripe's skills live at `github.com/stripe/ai` (not `stripe/skills`). Check the actual URL before cloning.
 
+8. **Windows `execute_code` path separator.** On Windows, `shutil.copytree()` and `Path.rglob()` work with `\\` or `/`. Always use `Path(os.path.expanduser("~/..."))` — hardcoded `C:\` paths break when the HOME drive letter changes.
+
+9. **Strip duplicates from multi-provider repos.** Stripe's `providers/` directory contains identical skill copies under each provider. When importing, check `skill.name` in `skills_list()` after copy — duplicates get the same folder name and Hermes merges them, but you still waste clone time on them. Run a dedup pass: collect all SKILL.md contents into a `{md5: name}` dict before copying.
+
+10. **Bash parantez syntax hatası.** `echo` ve yorum satırlarında `(parantez)` kullanma — bash alt-shell olarak yorumlar ve `syntax error near unexpected token` hatası verir. Script yazarken `# (açıklama)` yerine `# -- aciklama --` kullan.
+
+11. **Python string'de tek tırnak içinde apostrof.** `'Claude Code'sun'` gibi ifadeler Python syntax hatası verir. Ya çift tırnak kullan (`"Claude Code'sun"`) ya da escape et (`'Claude Code\'sun'`). Payload oluştururken hep `json.dumps()` kullan, asla manuel string concatenation yapma.
+
 ## Verification Checklist
 
 - [ ] All source repos cloned successfully
@@ -232,5 +250,6 @@ Her adımda kod güvenlik taraması yapıldı
 - [ ] Script files scanned for dangerous patterns
 - [ ] Skills copied to correct category directories
 - [ ] `skills_list()` reflects all new skills
+- [ ] Audit for duplicates: md5 hash compare, folder-name vs frontmatter-name mismatch (see `hermes-agent` → Curator → Deduplication audit)
 - [ ] Cleanup completed (temp dirs removed)
 - [ ] Report delivered with per-category counts and any risk notes

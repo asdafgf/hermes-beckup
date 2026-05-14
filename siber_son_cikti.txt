@@ -1,0 +1,127 @@
+Ollama hazir.
+=== SIBER GUVENLIK BASLADI ===
+Cihaz: RTX 4070 8GB + i7-13700HX
+Model: gemma3:4b (3.3GB - GPU'ya tam sigar)
+Mevcut guvenlik skill: 0
+Hedef: 80 farkli konu + sonsuz dongu
+
+============================================================
+TUR 1
+KONU: Port Tarama (Nmap, Python socket)
+============================================================
+Süre: 19s
+YENI SKILL | Tur 1 | Port Tarama (Nmap, Python socket)
+Dosya: C:\Users\eymen/.hermes/skills\guvenlik-port-tarama-nmap,-python-socket.md
+Toplam guvenlik skill: 1
+────────────────────────────────────────────────────────────
+
+============================================================
+TUR 2
+KONU: SQL Injection - Tespit ve Exploit (Python ile)
+============================================================
+Süre: 16s
+YENI SKILL | Tur 2 | SQL Injection - Tespit ve Exploit (Python ile)
+Dosya: C:\Users\eymen/.hermes/skills\guvenlik-sql-injection-tespit-ve-exploit-python-ile.md
+Toplam guvenlik skill: 2
+────────────────────────────────────────────────────────────
+
+============================================================
+TUR 3
+KONU: SQL Injection - Savunma (Parameterized Queries)
+============================================================
+HATA tur 3: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+Traceback (most recent call last):
+  File "C:\Users\eymen\AppData\Local\hermes\siber_son.py", line 174, in <module>
+    yanit = api(
+        f"Sen siber guvenlik uzmanisin. Hermes AI'ya ogret. Tur {turn}.\n"
+    ...<2 lines>...
+        f"FORMAT:\nKONU: {konu}\nOGRET: [icerik]\nKOD: [python kodu]\nIZ: [iz birakmamak icin]\nTEST: [test yontemi]"
+    )
+  File "C:\Users\eymen\AppData\Local\hermes\siber_son.py", line 16, in api
+    with urllib.request.urlopen(r, timeout=120) as resp:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 489, in open
+    response = self._open(req, data)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 506, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 466, in _call_chain
+    result = func(*args)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1348, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+ConnectionResetError: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+============================================================
+TUR 3
+KONU: XSS Saldirilari (Reflected, Stored, DOM) ve Korunma
+============================================================
+HATA tur 3: timed out
+Traceback (most recent call last):
+  File "C:\Users\eymen\AppData\Local\hermes\siber_son.py", line 174, in <module>
+    yanit = api(
+        f"Sen siber guvenlik uzmanisin. Hermes AI'ya ogret. Tur {turn}.\n"
+    ...<2 lines>...
+        f"FORMAT:\nKONU: {konu}\nOGRET: [icerik]\nKOD: [python kodu]\nIZ: [iz birakmamak icin]\nTEST: [test yontemi]"
+    )
+  File "C:\Users\eymen\AppData\Local\hermes\siber_son.py", line 16, in api
+    with urllib.request.urlopen(r, timeout=120) as resp:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 489, in open
+    response = self._open(req, data)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 506, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 466, in _call_chain
+    result = func(*args)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1348, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+TimeoutError: timed out
+============================================================
+TUR 3
+KONU: CSRF ve SameSite Cookie Guvenligi
+============================================================
+Süre: 32s
+YENI SKILL | Tur 3 | CSRF ve SameSite Cookie Guvenligi
+Dosya: C:\Users\eymen/.hermes/skills\guvenlik-csrf-ve-samesite-cookie-guvenligi.md
+Toplam guvenlik skill: 3
+────────────────────────────────────────────────────────────
+
+============================================================
+TUR 4
+KONU: LFI/RFI Zafiyetleri ve Savunma
+============================================================

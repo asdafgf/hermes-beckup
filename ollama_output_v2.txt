@@ -1,0 +1,518 @@
+[22:05:53] === OLLAMA-HERMES DONGUSU BASLADI (v2) ===
+[22:05:53] Mevcut ollama skill: 86
+[22:05:57] *** YENI SKILL | Tur #1 | Yapay Zeka Temelleri | Toplam: 88
+[22:06:03] [TEKRAR] Tur #2 | Kripto Para Birimleri
+[22:06:09] *** YENI SKILL | Tur #3 | Veri Gizliliği ve Etik | Toplam: 91
+[22:06:16] *** YENI SKILL | Tur #4 | Algoritmik Önyargı ve Çözümleri | Toplam: 94
+[22:06:21] *** YENI SKILL | Tur #5 | Sistemlerin Gözlemlenmesi | Toplam: 96
+[22:06:28] *** YENI SKILL | Tur #6 | Veri Tabanı Tasarımı | Toplam: 97
+[22:06:33] *** YENI SKILL | Tur #7 | Siber Güvenlik Temelleri | Toplam: 99
+[22:06:39] *** YENI SKILL | Tur #8 | Algoritmik Düşünce | Toplam: 102
+[22:06:44] *** YENI SKILL | Tur #9 | İnsan-Makine İşbirliği | Toplam: 104
+[22:06:50] *** YENI SKILL | Tur #10 | Biyo-Otantik Doğrulama | Toplam: 106
+[22:06:56] *** YENI SKILL | Tur #11 | Veri Görselleştirme Sanatı | Toplam: 107
+[22:07:03] [TEKRAR] Tur #12 | Algoritmik Düşünce
+[22:07:08] [TEKRAR] Tur #13 | Algoritmik Düşünce
+[22:07:15] *** YENI SKILL | Tur #14 | Sıfır Ölçekli Tasarım (Zero-Scaling Design) | Toplam: 112
+[22:07:20] [TEKRAR] Tur #15 | Algoritmik Düşünce
+[22:07:26] [TEKRAR] Tur #16 | Algoritmik Düşünce
+[22:07:31] *** YENI SKILL | Tur #17 | Blockchain’in Temelleri | Toplam: 116
+[22:07:42] *** YENI SKILL | Tur #18 | Tamamdır, Hermes için yeni bir ders hazırlıyorum. İşte ilk ü | Toplam: 118
+[22:07:47] [TEKRAR] Tur #19 | Algoritmik Düşünce
+[22:07:57] [TEKRAR] Tur #20 | Algoritmik Düşünce
+[22:08:02] [TEKRAR] Tur #21 | Algoritmik Düşünce
+[22:08:09] *** YENI SKILL | Tur #22 | Dijital Iş Işareti (Digital Signature) | Toplam: 122
+[22:08:14] *** YENI SKILL | Tur #23 | Dijital İmzalar – Güvenli İletişim | Toplam: 123
+[22:08:21] *** YENI SKILL | Tur #24 | Dijital İmzalar: Güvenli Veri Aktarımı | Toplam: 126
+[22:08:26] *** YENI SKILL | Tur #25 | Algoritmik Düşünce Sürekliliği | Toplam: 128
+[22:08:33] *** YENI SKILL | Tur #26 | Veri Sıkıştırma Teknikleri | Toplam: 131
+[22:08:39] *** YENI SKILL | Tur #27 | Çevrimiçi Güvenlik - Kriptoanaliz | Toplam: 132
+[22:08:52] *** YENI SKILL | Tur #28 | Parçacık Fiziği Temelleri | Toplam: 133
+[22:08:58] [TEKRAR] Tur #29 | Algoritmik Düşünce
+[22:09:04] *** YENI SKILL | Tur #30 | Algoritmik Verimlilik | Toplam: 135
+[22:09:09] *** YENI SKILL | Tur #31 | Sanal Gerçeklik Temelleri | Toplam: 136
+[22:09:17] *** YENI SKILL | Tur #32 | Yapay Zeka Etik İlkeler | Toplam: 138
+[22:09:22] [TEKRAR] Tur #33 | Veri Görselleştirme Sanatı
+[22:09:28] *** YENI SKILL | Tur #34 | Çevik Yazılım Geliştirme | Toplam: 140
+[22:09:33] [TEKRAR] Tur #35 | Veri Görselleştirme Sanatı
+[22:09:39] [TEKRAR] Tur #36 | Blockchain Teknolojisi
+[22:09:44] *** YENI SKILL | Tur #37 | Biyometrik Tanıma Sistemleri | Toplam: 142
+[22:09:51] *** YENI SKILL | Tur #38 | Algoritmik Yanlılık ve Adalet | Toplam: 144
+[22:09:56] [TEKRAR] Tur #39 | Veri Görselleştirme Sanatı
+[22:10:06] [TEKRAR] Tur #40 | Çevik Yazılım Geliştirme
+[22:10:11] *** YENI SKILL | Tur #41 | Dijital Sanat ve NFT'ler | Toplam: 148
+[22:10:17] *** YENI SKILL | Tur #42 | Veri Gizliliği ve Şifreleme | Toplam: 150
+[22:10:22] *** YENI SKILL | Tur #43 | Bilginin Kaybı (Information Loss) | Toplam: 152
+[22:10:29] *** YENI SKILL | Tur #44 | Algoritmaların Optimizasyonu | Toplam: 154
+[22:10:34] *** YENI SKILL | Tur #45 | Geriye Dönük Yürüyüş (Backtracking) | Toplam: 155
+[22:10:40] *** YENI SKILL | Tur #46 | Veri Normalizasyonu | Toplam: 158
+[22:10:45] *** YENI SKILL | Tur #47 | Algoritmik Zaman Karmaşıklığı | Toplam: 160
+[22:10:52] *** YENI SKILL | Tur #48 | Veri Tipleri ve Kullanımı | Toplam: 162
+[22:10:57] *** YENI SKILL | Tur #49 | Veri Madenciliğinde Desen Tanıma | Toplam: 163
+[22:11:09] *** YENI SKILL | Tur #50 | Bilgi Grafikleri | Toplam: 165
+[22:11:15] [TEKRAR] Tur #51 | Algoritmik Düşünce
+[22:11:21] [TEKRAR] Tur #52 | Çevik Yazılım Geliştirme
+[22:11:26] [TEKRAR] Tur #53 | Algoritmik Düşünce
+[22:11:33] *** YENI SKILL | Tur #54 | Algoritmik Düşünce ve Optimizasyon | Toplam: 169
+[22:11:38] *** YENI SKILL | Tur #55 | Yapay Zeka Etiği ve Güvenilirliği | Toplam: 170
+[22:11:45] *** YENI SKILL | Tur #56 | Veri Çıkarımı ve Anlamlandırma | Toplam: 172
+[22:11:50] *** YENI SKILL | Tur #57 | Yapay Zeka Bilinç Dışı İşlemler | Toplam: 173
+[22:11:57] *** YENI SKILL | Tur #58 | Algoritmik Yanlılıkları Anlamak | Toplam: 174
+[22:12:01] *** YENI SKILL | Tur #59 | Şifreleme Temelleri | Toplam: 175
+[22:12:07] *** YENI SKILL | Tur #60 | Veri Tabanı Yönetimi | Toplam: 177
+[22:12:12] *** YENI SKILL | Tur #61 | Algoritmaların Performansı | Toplam: 178
+[22:12:22] *** YENI SKILL | Tur #62 | Bulut Depolama Kavramları | Toplam: 181
+[22:12:27] *** YENI SKILL | Tur #63 | Web Sunucuları ve HTTP | Toplam: 182
+[22:12:33] [TEKRAR] Tur #64 | Veri Madenciliği Temelleri
+[22:12:38] *** YENI SKILL | Tur #65 | Veri Yapıları Temelleri | Toplam: 184
+[22:12:44] [TEKRAR] Tur #66 | Algoritmik Düşünce
+[22:12:49] *** YENI SKILL | Tur #67 | Algoritmaların Önemi | Toplam: 186
+[22:12:59] [TEKRAR] Tur #68 | Web Sunucuları ve HTTP
+[22:13:09] [TEKRAR] Tur #69 | Web Sunucuları ve HTTP
+[22:13:15] *** YENI SKILL | Tur #70 | Bilgi Kodlama (Kriptografi) | Toplam: 189
+[22:13:20] *** YENI SKILL | Tur #71 | Yazılım Testi Temelleri | Toplam: 190
+[22:13:27] [TEKRAR] Tur #72 | Veri Tabanı Yönetimi
+[22:13:32] [TEKRAR] Tur #73 | Veri Madenciliği Temelleri
+[22:13:38] [TEKRAR] Tur #74 | Veri Tabanı Yönetimi
+[22:13:43] *** YENI SKILL | Tur #75 | Sanallaştırma ve Simülasyon | Toplam: 197
+[22:13:50] *** YENI SKILL | Tur #76 | Algoritmik Düşünce ve Problem Çözme | Toplam: 199
+[22:14:00] *** YENI SKILL | Tur #77 | Harika, Hermes'i eğitmek için doğru yoldayız! İşte Hermes iç | Toplam: 201
+[22:14:09] [TEKRAR] Tur #78 | Sanallaştırma ve Simülasyon
+[22:14:13] *** YENI SKILL | Tur #79 | Genetik ve Mutasyonlar | Toplam: 203
+[22:14:25] *** YENI SKILL | Tur #80 | Ağ Topolojileri | Toplam: 206
+[22:14:30] *** YENI SKILL | Tur #81 | Algoritmaların Karmaşıklığı | Toplam: 208
+[22:14:37] *** YENI SKILL | Tur #82 | Bilgi Erişimine Öncelik | Toplam: 211
+[22:14:43] *** YENI SKILL | Tur #83 | BİLİNÇLİ ÖĞRENME | Toplam: 213
+[22:14:54] [TEKRAR] Tur #84 | Kripto Para Birimleri
+[22:14:59] *** YENI SKILL | Tur #85 | Dijital Kimlikler | Toplam: 217
+[22:15:05] *** YENI SKILL | Tur #86 | Yaratıcılık ve Problem Çözme | Toplam: 219
+[22:15:11] [TEKRAR] Tur #87 | Algoritmik Düşünce
+[22:15:22] *** YENI SKILL | Tur #88 | Bilinçli Öğrenme | Toplam: 222
+[22:15:27] [TEKRAR] Tur #89 | Algoritmik Düşünce
+[22:15:34] [TEKRAR] Tur #90 | Algoritmik Düşünce
+[22:15:39] [TEKRAR] Tur #91 | Algoritmik Düşünce
+[22:15:49] [TEKRAR] Tur #92 | Algoritmik Düşünce
+[22:15:54] *** YENI SKILL | Tur #93 | Algoritmaların Evrimi | Toplam: 227
+[22:16:06] *** YENI SKILL | Tur #94 | Görsel Tanıma ve İşleme | Toplam: 229
+[22:16:11] *** YENI SKILL | Tur #95 | Kristal Yapılandırma | Toplam: 230
+[22:16:13] BEKLENMEYEN HATA: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+Traceback (most recent call last):
+  File "C:\Users\eymen\AppData\Local\hermes\ollama_loop_v2.py", line 98, in <module>
+    resp = talk_to_ollama(prompt)
+  File "C:\Users\eymen\AppData\Local\hermes\ollama_loop_v2.py", line 24, in talk_to_ollama
+    with urllib.request.urlopen(req, timeout=120) as resp:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 489, in open
+    response = self._open(req, data)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 506, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 466, in _call_chain
+    result = func(*args)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1348, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+ConnectionResetError: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+[22:16:22] *** YENI SKILL | Tur #97 | Yapay Zeka Etik Kuralları | Toplam: 231
+[22:16:40] [TEKRAR] Tur #98 | Blockchain'in Temelleri
+[22:16:45] [TEKRAR] Tur #99 | Kripto Para Birimleri
+[22:17:26] [TEKRAR] Tur #100 | Siber Güvenlik Temelleri
+[22:17:32] [TEKRAR] Tur #101 | Algoritmik Düşünce
+[22:17:39] [TEKRAR] Tur #102 | Algoritmik Düşünce
+[22:17:44] [TEKRAR] Tur #103 | Algoritmik Düşünce
+[22:17:44] Cok tekrar - konu listesi sifirlaniyor ve prompt sertlesiyor.
+[22:17:50] [TEKRAR] Tur #104 | Yapay Zeka Temelleri
+[22:17:55] [TEKRAR] Tur #105 | Yapay Zeka Temelleri
+[22:18:00] *** YENI SKILL | Tur #106 | Yapay Zeka Nedir? | Toplam: 241
+[22:18:05] *** YENI SKILL | Tur #107 | Ağlar ve Ağırlıklandırma | Toplam: 242
+[22:18:11] *** YENI SKILL | Tur #108 | Algoritmaların Mantığı | Toplam: 243
+[22:18:17] *** YENI SKILL | Tur #109 | Veri Tabanı Yönetimi Temelleri | Toplam: 244
+[22:18:23] *** YENI SKILL | Tur #110 | Algoritmaların Akışı | Toplam: 245
+[22:18:28] *** YENI SKILL | Tur #111 | Çözümleme Teknikleri | Toplam: 247
+[22:18:35] [TEKRAR] Tur #112 | Dijital Sanat ve NFT'ler
+[22:18:40] [TEKRAR] Tur #113 | İnsan-Makine İşbirliği
+[22:18:46] *** YENI SKILL | Tur #114 | Şifreleme ve Gizleme | Toplam: 252
+[22:18:51] *** YENI SKILL | Tur #115 | Bilgi Mimarisi ve Veri Organizasyonu | Toplam: 254
+[22:18:58] *** YENI SKILL | Tur #116 | Algoritmaların Verimliliği | Toplam: 256
+[22:19:03] [TEKRAR] Tur #117 | İnsan-Makine İşbirliği
+[22:19:09] *** YENI SKILL | Tur #118 | Çoklu İş Parçacığı (Multithreading) | Toplam: 259
+[22:19:14] [TEKRAR] Tur #119 | Kripto Para Birimleri
+[22:19:21] *** YENI SKILL | Tur #120 | Kodun Okunabilirliği (Code Readability) | Toplam: 261
+[22:19:26] *** YENI SKILL | Tur #121 | Veri Yapıları ve Algoritmalar | Toplam: 261
+[22:19:32] [TEKRAR] Tur #122 | Blockchain Teknolojisi
+[22:19:38] *** YENI SKILL | Tur #123 | Bit İşaretleri (Bitwise Operations) | Toplam: 263
+[22:19:45] [TEKRAR] Tur #124 | İnsan-Makine İşbirliği
+[22:19:50] [TEKRAR] Tur #125 | İnsan-Makine İşbirliği
+[22:19:56] *** YENI SKILL | Tur #126 | İnsan-Bilgisayar Etkileşimi (HCI) | Toplam: 266
+[22:20:01] *** YENI SKILL | Tur #127 | Olasılık Temelleri | Toplam: 267
+[22:20:08] [TEKRAR] Tur #128 | Algoritmik Düşünce
+[22:20:13] [TEKRAR] Tur #129 | Algoritmaların Optimizasyonu
+[22:20:20] [TEKRAR] Tur #130 | Algoritmik Düşünce
+[22:20:24] *** YENI SKILL | Tur #131 | Algoritmik Düşünce - Temelleri | Toplam: 271
+[22:20:30] *** YENI SKILL | Tur #132 | Bilgi Kodlama ve Şifreleme | Toplam: 274
+[22:20:35] [TEKRAR] Tur #133 | Veri Tabanı Yönetimi
+[22:20:42] *** YENI SKILL | Tur #134 | Çatışma Çözümü (Conflict Resolution) | Toplam: 275
+[22:20:47] *** YENI SKILL | Tur #135 | Veri Yapıları - Temel Kavramlar | Toplam: 276
+[22:20:54] [TEKRAR] Tur #136 | Algoritmik Düşünce
+[22:20:59] [TEKRAR] Tur #137 | Algoritmik Düşünce
+[22:21:05] *** YENI SKILL | Tur #138 | Algoritmik Düşünce - Akış Şemaları | Toplam: 280
+[22:21:10] [TEKRAR] Tur #139 | Kripto Para Birimleri
+[22:21:17] [TEKRAR] Tur #140 | Yapay Zeka Etik Kuralları
+[22:21:22] [TEKRAR] Tur #141 | Yapay Zeka Etik Kuralları
+[22:21:28] *** YENI SKILL | Tur #142 | Tanıdık Algoritmalar – Dizi (Array) | Toplam: 285
+[22:21:33] *** YENI SKILL | Tur #143 | Yazılamalar – Temel Türler | Toplam: 287
+[22:21:38] *** YENI SKILL | Tur #144 | Değişkenler ve Veri Tipleri | Toplam: 288
+[22:21:43] *** YENI SKILL | Tur #145 | Algoritmik Düşünme - Akış Şemaları | Toplam: 290
+[22:21:49] *** YENI SKILL | Tur #146 | Kodun Okunabilirliği | Toplam: 291
+[22:21:54] *** YENI SKILL | Tur #147 | Hataları Anlamak ve Düzeltmek | Toplam: 292
+[22:22:01] [TEKRAR] Tur #148 | Veri Gizliliği ve Etik
+[22:22:06] [TEKRAR] Tur #149 | Veri Gizliliği ve Etik
+[22:22:13] [TEKRAR] Tur #150 | Veri Gizliliği ve Etik
+[22:22:18] *** YENI SKILL | Tur #151 | Veri Tipleri ve Kullanımları | Toplam: 296
+[22:22:24] [TEKRAR] Tur #152 | Algoritmik Düşünce
+[22:22:29] [TEKRAR] Tur #153 | Algoritmik Düşünce
+[22:22:36] [TEKRAR] Tur #154 | Algoritmik Düşünce
+[22:22:41] [TEKRAR] Tur #155 | Algoritmik Düşünce
+[22:22:48] [TEKRAR] Tur #156 | Algoritmik Düşünce
+[22:22:54] [TEKRAR] Tur #157 | Algoritmik Düşünce
+[22:22:54] Cok tekrar - konu listesi sifirlaniyor ve prompt sertlesiyor.
+[22:22:59] [TEKRAR] Tur #158 | Yapay Zeka Nedir?
+[22:23:04] [TEKRAR] Tur #159 | Yapay Zeka Temelleri
+[22:23:13] *** YENI SKILL | Tur #160 | Tamamdır, işte Hermes için 160. ders notu: | Toplam: 304
+[22:23:18] [TEKRAR] Tur #161 | Algoritmik Düşünce Temelleri
+[22:23:24] [TEKRAR] Tur #162 | Algoritmik Düşünce
+[22:23:30] [TEKRAR] Tur #163 | Algoritmik Düşünce
+[22:23:36] *** YENI SKILL | Tur #164 | Veri Biçimlendirme Temelleri | Toplam: 309
+[22:23:41] [TEKRAR] Tur #165 | Algoritmik Düşünce
+[22:23:47] [TEKRAR] Tur #166 | Algoritmik Düşünce
+[22:23:52] *** YENI SKILL | Tur #167 | Algoritmaların Temelleri | Toplam: 312
+[22:23:59] *** YENI SKILL | Tur #168 | Muhakeme Zinciri Oluşturma | Toplam: 315
+[22:24:06] *** YENI SKILL | Tur #169 | Algılama ve Tanıma | Toplam: 316
+[22:24:12] *** YENI SKILL | Tur #170 | Bilgi Gösterimi (Knowledge Representation) | Toplam: 318
+[22:24:17] [TEKRAR] Tur #171 | Çatışma Çözümü (Conflict Resolution)
+[22:24:23] *** YENI SKILL | Tur #172 | OYUN DÜŞÜNMEYİ GELİŞTİRME | Toplam: 321
+[22:24:29] [TEKRAR] Tur #173 | Algoritmik Düşünce
+[22:24:36] [TEKRAR] Tur #174 | Kripto Para Birimleri
+[22:24:42] *** YENI SKILL | Tur #175 | Şifreleme ve Çözme Teknikleri | Toplam: 324
+[22:24:47] BEKLENMEYEN HATA: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+Traceback (most recent call last):
+  File "C:\Users\eymen\AppData\Local\hermes\ollama_loop_v2.py", line 98, in <module>
+    resp = talk_to_ollama(prompt)
+  File "C:\Users\eymen\AppData\Local\hermes\ollama_loop_v2.py", line 24, in talk_to_ollama
+    with urllib.request.urlopen(req, timeout=120) as resp:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 489, in open
+    response = self._open(req, data)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 506, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 466, in _call_chain
+    result = func(*args)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1348, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+ConnectionResetError: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+[22:24:55] *** YENI SKILL | Tur #177 | Algoritmik Düşünce ve Yaratıcılık | Toplam: 325
+[22:25:01] *** YENI SKILL | Tur #178 | Duygusal Zeka Anlama | Toplam: 326
+[22:25:03] BEKLENMEYEN HATA: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+Traceback (most recent call last):
+  File "C:\Users\eymen\AppData\Local\hermes\ollama_loop_v2.py", line 98, in <module>
+    resp = talk_to_ollama(prompt)
+  File "C:\Users\eymen\AppData\Local\hermes\ollama_loop_v2.py", line 24, in talk_to_ollama
+    with urllib.request.urlopen(req, timeout=120) as resp:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 489, in open
+    response = self._open(req, data)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 506, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 466, in _call_chain
+    result = func(*args)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1348, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+ConnectionResetError: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+[22:25:13] *** YENI SKILL | Tur #180 | Bellek Yönetimi Temelleri | Toplam: 327
+[22:25:17] *** YENI SKILL | Tur #181 | Veri Entegrasyonu | Toplam: 329
+[22:25:23] [TEKRAR] Tur #182 | Algoritmik Düşünce
+[22:25:30] [TEKRAR] Tur #183 | Algoritmik Düşünce
+[22:25:36] [TEKRAR] Tur #184 | Algoritmik Düşünce
+[22:25:43] [TEKRAR] Tur #185 | Algoritmik Düşünce
+[22:25:49] [TEKRAR] Tur #186 | Algoritmik Düşünce
+[22:25:56] [TEKRAR] Tur #187 | Algoritmik Düşünce
+[22:25:56] Cok tekrar - konu listesi sifirlaniyor ve prompt sertlesiyor.
+[22:26:01] [TEKRAR] Tur #188 | Yapay Zeka Nedir?
+[22:26:08] [TEKRAR] Tur #189 | Yapay Zeka Temelleri
+[22:26:13] [TEKRAR] Tur #190 | Yapay Zeka Temelleri
+[22:26:19] [TEKRAR] Tur #191 | Yapay Zeka Temelleri
+[22:26:24] [TEKRAR] Tur #192 | Yapay Zeka Temelleri
+[22:26:31] [TEKRAR] Tur #193 | Yapay Zeka Temelleri
+[22:26:31] Cok tekrar - konu listesi sifirlaniyor ve prompt sertlesiyor.
+[22:26:36] [TEKRAR] Tur #194 | Yapay Zeka Temelleri
+[22:26:40] BEKLENMEYEN HATA: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+Traceback (most recent call last):
+  File "C:\Users\eymen\AppData\Local\hermes\ollama_loop_v2.py", line 98, in <module>
+    resp = talk_to_ollama(prompt)
+  File "C:\Users\eymen\AppData\Local\hermes\ollama_loop_v2.py", line 24, in talk_to_ollama
+    with urllib.request.urlopen(req, timeout=120) as resp:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 489, in open
+    response = self._open(req, data)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 506, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 466, in _call_chain
+    result = func(*args)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1348, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+ConnectionResetError: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+[22:26:49] *** YENI SKILL | Tur #196 | AI’ların Temel Öğrenmesi | Toplam: 339
+[22:26:51] BEKLENMEYEN HATA: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+Traceback (most recent call last):
+  File "C:\Users\eymen\AppData\Local\hermes\ollama_loop_v2.py", line 98, in <module>
+    resp = talk_to_ollama(prompt)
+  File "C:\Users\eymen\AppData\Local\hermes\ollama_loop_v2.py", line 24, in talk_to_ollama
+    with urllib.request.urlopen(req, timeout=120) as resp:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 489, in open
+    response = self._open(req, data)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 506, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 466, in _call_chain
+    result = func(*args)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1348, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+ConnectionResetError: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+[22:26:59] BEKLENMEYEN HATA: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+Traceback (most recent call last):
+  File "C:\Users\eymen\AppData\Local\hermes\ollama_loop_v2.py", line 98, in <module>
+    resp = talk_to_ollama(prompt)
+  File "C:\Users\eymen\AppData\Local\hermes\ollama_loop_v2.py", line 24, in talk_to_ollama
+    with urllib.request.urlopen(req, timeout=120) as resp:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 489, in open
+    response = self._open(req, data)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 506, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 466, in _call_chain
+    result = func(*args)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1348, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+ConnectionResetError: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+[22:27:06] BEKLENMEYEN HATA: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+Traceback (most recent call last):
+  File "C:\Users\eymen\AppData\Local\hermes\ollama_loop_v2.py", line 98, in <module>
+    resp = talk_to_ollama(prompt)
+  File "C:\Users\eymen\AppData\Local\hermes\ollama_loop_v2.py", line 24, in talk_to_ollama
+    with urllib.request.urlopen(req, timeout=120) as resp:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 489, in open
+    response = self._open(req, data)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 506, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 466, in _call_chain
+    result = func(*args)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1348, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+ConnectionResetError: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+[22:27:18] *** YENI SKILL | Tur #200 | Veri Ön İşleme Teknikleri | Toplam: 342
+[22:27:25] [TEKRAR] Tur #201 | Algoritmik Düşünce ve Problem Çözme
+[22:27:31] [TEKRAR] Tur #202 | Algoritmik Düşünce
+[22:27:42] *** YENI SKILL | Tur #203 | Tamamdır, Hermes'in ikinci tur derslerine başlıyoruz! | Toplam: 346
+[22:27:49] *** YENI SKILL | Tur #204 | Algoritmik Düşünme | Toplam: 348
+[22:27:55] [TEKRAR] Tur #205 | Veri Ön İşleme Teknikleri
+[22:28:06] [TEKRAR] Tur #206 | Veri Ön İşleme Teknikleri
+[22:28:14] *** YENI SKILL | Tur #207 | Yapay Zeka Etiği | Toplam: 351
+[22:28:21] *** YENI SKILL | Tur #208 | Veri Önceliklendirme | Toplam: 352
+[22:28:27] [TEKRAR] Tur #209 | Siber Güvenlik Temelleri
+[22:28:33] *** YENI SKILL | Tur #210 | Senkronizasyon Problemi | Toplam: 354
+[22:28:40] *** YENI SKILL | Tur #211 | Optimizasyon Teknikleri | Toplam: 357
+[22:28:47] [TEKRAR] Tur #212 | Yapay Zeka Etiği
+[22:28:55] *** YENI SKILL | Tur #213 | Bilinçli Belge Yönetimi | Toplam: 359
+[22:29:02] [TEKRAR] Tur #214 | Kripto Para Birimleri ve Blockchain Teknolojisi
+[22:29:23] *** YENI SKILL | Tur #215 | Veri Madenciliğinde Anormallikler | Toplam: 360
+[22:29:40] [TEKRAR] Tur #216 | Algoritmik Düşünce
+[22:29:42] BEKLENMEYEN HATA: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+Traceback (most recent call last):
+  File "C:\Users\eymen\AppData\Local\hermes\ollama_loop_v2.py", line 98, in <module>
+    resp = talk_to_ollama(prompt)
+  File "C:\Users\eymen\AppData\Local\hermes\ollama_loop_v2.py", line 24, in talk_to_ollama
+    with urllib.request.urlopen(req, timeout=120) as resp:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 489, in open
+    response = self._open(req, data)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 506, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 466, in _call_chain
+    result = func(*args)
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1348, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\urllib\request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\eymen\anaconda3\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\eymen\anaconda3\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+ConnectionResetError: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+[22:30:03] [TEKRAR] Tur #218 | Algoritmik Düşünce
+[22:30:08] [TEKRAR] Tur #219 | Algoritmik Düşünce
+[22:30:19] [TEKRAR] Tur #220 | Optimizasyon Teknikleri
+[22:30:25] [TEKRAR] Tur #221 | Algoritmik Düşünce
+[22:30:31] [TEKRAR] Tur #222 | Algoritmik Düşünce
+[22:30:31] Cok tekrar - konu listesi sifirlaniyor ve prompt sertlesiyor.
+[22:30:36] [TEKRAR] Tur #223 | Yapay Zeka Temelleri
+[22:30:40] [TEKRAR] Tur #224 | Yapay Zeka Temelleri
+[22:30:44] [TEKRAR] Tur #225 | Yapay Zeka Temelleri
+[22:30:50] *** YENI SKILL | Tur #226 | Tamamdır, Hermes'i eğitiyorum. İşte 226. ders: | Toplam: 362
+[22:30:55] *** YENI SKILL | Tur #227 | Karar Ağaçları ile Karar Verme | Toplam: 363
+[22:31:00] [TEKRAR] Tur #228 | Algoritmik Düşünce
+[22:31:05] [TEKRAR] Tur #229 | Algoritmik Düşünce
+[22:31:10] *** YENI SKILL | Tur #230 | Karar Ağaçları ile | Toplam: 364
+[22:31:14] *** YENI SKILL | Tur #231 | Algoritmik Karışıklık | Toplam: 365
+[22:31:20] *** YENI SKILL | Tur #232 | Veri Madenciliğinde Kümeleme | Toplam: 366
+[22:31:26] [TEKRAR] Tur #233 | Yapay Zeka Etiği
+[22:31:32] [TEKRAR] Tur #234 | Yapay Zeka Etiği
+[22:31:36] *** YENI SKILL | Tur #235 | Bayesian Ağları | Toplam: 367
+[22:31:42] *** YENI SKILL | Tur #236 | Büyük O anlama (Big-O Notation) | Toplam: 368
+[22:31:47] *** YENI SKILL | Tur #237 | Optimizasyon Algoritmaları | Toplam: 368
+[22:31:53] *** YENI SKILL | Tur #238 | Kubbe Veri Yapıları | Toplam: 369
+[22:32:28] *** YENI SKILL | Tur #239 | Algoritmik Kararlılık | Toplam: 372
