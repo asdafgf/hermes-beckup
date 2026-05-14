@@ -49,6 +49,9 @@ skills/.usage.json
 *.db-shm
 *.db-wal
 
+# LSP node_modules - cok buyuk
+lsp/node_modules/
+
 # Config yedekleri
 config.yaml.bak*
 
